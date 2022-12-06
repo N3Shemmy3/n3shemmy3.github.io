@@ -5,12 +5,12 @@ import Telegram from "../assets/svg/telegram.svg";
 import Instagram from "../assets/svg/instagram.svg";
 
 export default class ProfileCard extends Component {
-	constructor(props) {
+	constructor(props: {} | Readonly<{}>) {
 		super(props);
 		this.openWindow = this.openWindow.bind(this);
 	}
-	openWindow(url, name) {
-		//window.open("https://github.com/N3Shemmy3", "Github");
+	openWindow(url: string, name: string) {
+		window.open("https://github.com/N3Shemmy3", "Github");
 	}
 	render() {
 		return (

@@ -6,6 +6,7 @@
 	@apply
    h-full w-full flex flex-col pt-16
    bg-colorBackground-light
+   bg-gradient-to-r from-colorSurface-light to-colorPrimary-dark
    text-colorOnBackground-light
    dark:bg-colorBackground-dark
    dark:text-colorOnBackground-dark;

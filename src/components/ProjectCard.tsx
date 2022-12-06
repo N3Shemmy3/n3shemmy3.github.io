@@ -1,10 +1,19 @@
 import { Component } from "react";
 
-
-export default class ProjectCard extends Component {
+interface Props {
+	link: string;
+	img: string;
+	title: string;
+	text: string;
+	language: string;
+}
+export default class ProjectCard extends Component<Props> {
 	render() {
 		return (
-			<a href={this.props.link} className="w-full shrink-1 md:w-70 cursor-pointer h-fit p-0 rounded-xl space-y-2 select-none bg-colorSurface-light border border-opacity-20 border-colorOutline-dark overflow-hidden ">
+			<a
+				href={this.props.link}
+				className="w-full shrink-1 md:w-70 cursor-pointer h-fit p-0 rounded-xl space-y-2 select-none bg-colorSurface-light border border-opacity-20 border-colorOutline-dark overflow-hidden "
+			>
 				<img
 					src={this.props.img}
 					className="w-full h-full hover:opacity-50"

@@ -1,5 +1,12 @@
 import { Component } from "react";
-class Button extends Component {
+
+interface Props {
+	url: string;
+	icon: string;
+	name: string;
+}
+
+class Button extends Component<Props> {
 	render() {
 		return (
 			<a href={this.props.url} className="mdi-button cursor-pointer select-none flex py-2 px-3 bg-colorPrimary-light hover:opacity-75 rounded-full space-x-2 ">
