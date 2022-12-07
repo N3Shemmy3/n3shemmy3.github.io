@@ -5,9 +5,7 @@ import Telegram from "../assets/svg/telegram.svg";
 import Instagram from "../assets/svg/instagram.svg";
 
 export default function ProfileCard() {
-	function openWindow(url: string, name: string) {
-		window.open("https://github.com/N3Shemmy3", "Github");
-	}
+
 
 	return (
 		<div className="w-full max-w-md mx-auto h-fit p-4 flex flex-col justify-center content-center space-y-3">

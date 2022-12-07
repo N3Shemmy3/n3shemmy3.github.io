@@ -29,8 +29,7 @@ export default function ProjectsCard(props: any, state: State) {
 			   console.log(error);
 		   });
 	}, [])
-			
-		
+	
 	return (
 		<div>
 			<div className="w-full max-w-md mx-auto h-fit p-4 flex flex-col justify-center content-center">
