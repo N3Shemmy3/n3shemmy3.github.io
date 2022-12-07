@@ -9,4 +9,4 @@ git add -A
 git commit -m 'New Deployment'
 git push -f git@github.com:N3Shemmy3/n3shemmy3.github.io.git master:gh-pages
 
-cd -
+cd C:\Users\Shemmy3\Dev\Projects\Web\frontend\n3shemmy3.github.io
