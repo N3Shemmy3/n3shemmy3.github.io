@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-colorBackgroundDark text-colorOnBackgroundDark;
+}
+
+.Toolbar {
+    @apply flex p-4 h-14 w-full shadow-sm space-x-3 items-center bg-colorSurfaceDark text-colorOnSurfaceDark;
+}
+
+.toolbar.Title {
+    @apply text-2xl;
+}
