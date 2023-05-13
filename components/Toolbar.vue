@@ -1,6 +1,6 @@
 <template>
     <div class="Toolbar">
-        <MenuIcon />
+        <MenuIcon effect=”ripple” ref="button" @click="" class="cursor-pointer" />
         <span class="text-xl">Toolbar</span>
     </div>
 </template>

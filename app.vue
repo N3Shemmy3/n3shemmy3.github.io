@@ -6,4 +6,8 @@
 
 <script setup>
 import '@/assets/css/tailwind.css';
+onMounted( () => {
+
+} );
+
 </script>
