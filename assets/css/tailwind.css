@@ -3,40 +3,39 @@
 @tailwind utilities;
 
 body {
-    @apply bg-colorBackgroundDark text-colorOnBackgroundDark;
+    @apply w-full h-full;
+    @apply bg-colorBackgroundLight;
+    @apply text-colorOnBackgroundLight;
+    @apply select-none;
 }
 
-.Toolbar {
-    @apply flex p-4 h-14 w-full shadow-sm space-x-3 items-center bg-colorSurfaceDark text-colorOnSurfaceDark;
+/* Ripple effect */
+.ripple {
+    outline: none;
+    background-position: center;
+    transition: background 0.8s;
 }
 
-.toolbar.Title {
-    @apply text-2xl;
+.ripple:hover {
+    background: var(-colorSurface) radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
 }
-[effect=ripple] {
+
+.ripple:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+/* Button style */
+button {
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
     cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-[effect=ripple]:before {
-    content: "";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    transform-origin: center;
-    top: calc(var(--y) * 1px);
-    left: calc(var(--x) * 1px);
-    width: calc(var(--d) * 1px);
-    height: calc(var(--d) * 1px);
-    background: var(--ripple-background, white);
-    transform: translate(-50%, -50%) scale(var(--s, 1));
-    opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
-    transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+    color: white;
+    background-color: #2196f3;
+    box-shadow: 0 0 4px #999;
+    outline: none;
 }
