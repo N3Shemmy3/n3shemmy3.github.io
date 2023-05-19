@@ -1,65 +1,14 @@
 <template>
-    <div class="">
-        <Toolbar />
-        <div class="container">
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-            <h1>Hellow World</h1>
-        </div>
-
+    <div class="container">
+        <h1 class="pr-2 mb-6 text-3xl text-end font-semibold cursor-pointer ">About Me</h1>
+        <img src="assets/img/shemmy.jpg">
     </div>
 </template>
+<script setup lang="ts">
+import portrait_img from 'assets/img/shemmy.jpg';
+</script>
 <style scoped>
-.container {
-    @apply px-4;
-    @apply py-2;
-    @apply mt-14;
-    @apply overflow-auto;
+.comntainer {
+    height: fit-content;
 }
-
 </style>

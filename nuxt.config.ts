@@ -1,6 +1,19 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import vRipple from 'plugins/vRipple'
 export default defineNuxtConfig({
-    modules: ['v-wave/nuxt'],
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@img/*": [
+                "assets/img/*",
+            ],
+            "@css/*": [
+                "assets/css/*",
+            ]
+        }
+    },
+    plugins: [
+        '~/plugins/vRipple.js', // only in client side
+    ],
     css: ["@/assets/css/tailwind.css"],
     vite: {
         define: {
@@ -9,8 +22,11 @@ export default defineNuxtConfig({
     },
     postcss: {
         plugins: {
+            'postcss-import': {},
+            'tailwindcss/nesting': {},
             tailwindcss: {},
-            autoprefixer: {}
+            autoprefixer: {},
         }
-    }
+    },
+
 })
