@@ -1,6 +1,7 @@
 import vRipple from 'plugins/vRipple'
 export default defineNuxtConfig({
-    "compilerOptions": {
+    /**
+    compilerOptions: {
         "baseUrl": "./",
         "paths": {
             "@img/*": [
@@ -11,6 +12,7 @@ export default defineNuxtConfig({
             ]
         }
     },
+    */
     plugins: [
         '~/plugins/vRipple.js', // only in client side
     ],
