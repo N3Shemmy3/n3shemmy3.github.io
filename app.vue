@@ -1,6 +1,6 @@
 <template>
-  <div class="noSelect">
-    <div class="container flex-row">
+  <div class="flex m-auto max-w-screen-lg noSelect">
+    <div class="flex-row">
       <Navbar />
       <div class="content">
         <NuxtPage />
@@ -14,8 +14,7 @@ import '@/assets/css/tailwind.css';
 </script>
 <style scoped>
 .content {
-  @apply absolute;
-  @apply w-full h-full;
+  @apply max-w-screen-md h-full;
   @apply pl-16 pr-4;
   @apply py-2;
   @apply overflow-y-auto;
