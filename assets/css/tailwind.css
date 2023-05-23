@@ -10,6 +10,15 @@ body {
     @apply select-none;
 }
 
+/* main.css */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./fonts/Roboto-Light.ttf') format('truetype');
+}
+
 .noSelect {
     -webkit-tap-highDark-color: transparent;
     -webkit-touch-callout: none;

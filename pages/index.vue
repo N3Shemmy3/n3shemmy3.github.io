@@ -1,14 +1,19 @@
 <template>
     <div class="">
         <div class="p-4 mt-6 md:mt-20 mb-20">
-            <div class="sm:flex md:flex-row flex-col space-x-8 space-y-4">
+            <div class="sm:flex md:flex-row flex-col sm:space-x-4 space-y-8">
 
-                <img class="m-auto brightness-75 h-full scale-100 sn:h-60 sm:w-60 bg-colorPrimaryContainerDark rounded-3xl"
+                <img class="m-auto h-full sm:h-40 sm:w-40 bg-colorPrimaryContainerDark rounded-3xl"
                     src="https://avatars.githubusercontent.com/u/67279072?v=4" loading="lazy" alt="">
 
-                <div class="s:m-0 sm:h-full">
+                <div class=" mt-8 sm:h-full">
                     <h1 class="mb-2 text-2xl text-center sm:text-start md:text-3xl font-semibold">Shemmy Nyirenda</h1>
-                    <p class="text-sm  sm:text-lg ">A 19 year old Web Frontend Developer based in Zambia</p>
+                    <p class="text-sm sm:text-lg ">A 19 year old Web Frontend Developer based in Zambia
+                        Breakpoints and media queries
+                        You can also use variant modifiers to target media queries like responsive breakpoints, dark mode,
+                        prefers-reduced-motion, and more. For example, use md:transition-all to apply the transition-all
+                        utility at only medium screen sizes and above.
+                    </p>
                 </div>
             </div>
 

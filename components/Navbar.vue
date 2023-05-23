@@ -1,6 +1,11 @@
 <template>
     <div class="Toolbar mt-8">
-
+        <div class="pl-6 flex ">
+            <h6
+                class="m-auto text-[32px] text-center rotate-90 h-12 w-12 bg-colorPrimaryContainerDark text-colorOnPrimaryContainerDark rounded-xl">
+                S
+            </h6>
+        </div>
         <div v-for="(i, index) in menuItems">
             <h6 class="Item sm:text-base">{{ i }}</h6>
         </div>
@@ -9,9 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import MenuIcon from 'vue-material-design-icons/Menu.vue';
 
-const menuItems = ["About me", "Projects", "Blog", "Interests"];
+const menuItems = ["About", "Projects", "BlogPost", "Interests"];
 function empty() {
 
 }
@@ -19,10 +23,10 @@ function empty() {
 <style scoped >
 .Toolbar {
     @apply flex flex-row-reverse;
-    @apply h-14;
+    min-height: 56px;
     width: 100dvh;
     @apply p-4;
-    @apply space-x-2;
+    @apply space-x-4;
     @apply items-center;
     @apply text-colorOnBackgroundDark;
     z-index: 100;
@@ -35,7 +39,7 @@ function empty() {
 .Item {
     font-weight: 500;
     @apply text-sm inline-block;
-    @apply p-2;
+    @apply py-2 px-3;
 }
 
 .Action {
@@ -46,9 +50,10 @@ function empty() {
 
 .Item:hover {
     transition: font-weight .1s ease-in-out;
-    @apply transition-all;
-    @apply p-2.5;
-    @apply text-colorPrimaryDark;
+    @apply transition-colors duration-300;
+    @apply rounded-lg;
+    @apply bg-colorPrimaryContainerDark;
+    @apply text-colorOnPrimaryContainerDark;
     @apply font-semibold;
 }
 </style>
