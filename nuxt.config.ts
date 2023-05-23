@@ -1,18 +1,7 @@
 import vRipple from 'plugins/vRipple'
 export default defineNuxtConfig({
-    /**
-    compilerOptions: {
-        "baseUrl": "./",
-        "paths": {
-            "@img/*": [
-                "assets/img/*",
-            ],
-            "@css/*": [
-                "assets/css/*",
-            ]
-        }
-    },
-    */
+
+    
     plugins: [
         '~/plugins/vRipple.js', // only in client side
     ],

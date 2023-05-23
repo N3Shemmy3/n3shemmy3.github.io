@@ -1,6 +1,6 @@
 <template>
     <div class="Toolbar mt-8">
-        <MenuIcon class="ml-10" />
+
         <div v-for="(i, index) in menuItems">
             <h6 class="Item sm:text-base">{{ i }}</h6>
         </div>

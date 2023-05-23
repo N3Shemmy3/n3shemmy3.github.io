@@ -1,5 +1,5 @@
 <template>
-  <div class="flex m-auto max-w-screen-lg noSelect">
+  <div class="flex font-sans m-auto max-w-screen-lg noSelect">
     <div class="flex-row">
       <Navbar />
       <div class="content">
