@@ -1,13 +1,31 @@
 <template>
     <div class="Toolbar mt-8">
         <div class="pl-8 flex ">
-            <p
-                class="cursor-pointer rotate-90 h-12 w-12 bg-colorPrimaryContainerDark hover:bg-colorSecondaryContainerDark text-colorOnPrimaryContainerDark rounded-2xl text-[32px] text-center font-semibold">
+            <p class="
+                cursor-pointer 
+                rotate-90 
+                h-12 w-12 
+                bg-colorPrimaryContainerLight dark:bg-colorPrimaryContainerDark 
+                hover:bg-colorSecondaryContainerLight dark:hover:bg-colorSecondaryContainerDark 
+                text-colorOnPrimaryContainerLight dark:text-colorOnPrimaryContainerDark 
+                rounded-2xl 
+                text-[32px] 
+                text-center 
+                font-semibold">
                 S</p>
 
         </div>
         <div v-for="(i, index) in menuItems">
-            <h6 class="Item sm:text-base">{{ i }}</h6>
+            <h6 class="
+            Item 
+            sm:text-base
+            transition-colors 
+            duration-300
+            rounded-lg
+            bg-colorPrimaryContainerLight dark:bg-colorPrimaryContainerDark
+            text-colorOnPrimaryContainerLight dark:text-colorOnPrimaryContainerDark
+            font-semibold
+     ">{{ i }}</h6>
         </div>
         <div class="flex-grow"></div>
     </div>
@@ -53,8 +71,8 @@ function empty() {
     transition: font-weight .1s ease-in-out;
     @apply transition-colors duration-300;
     @apply rounded-lg;
-    @apply bg-colorPrimaryContainerDark;
-    @apply text-colorOnPrimaryContainerDark;
+    @apply dark: bg-colorPrimaryContainerDark;
+    @apply darktext-colorOnPrimaryContainerDark;
     @apply font-semibold;
 }
 </style>
