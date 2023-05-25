@@ -1,33 +1,75 @@
 <template>
-    <div class="Toolbar mt-8">
-        <div class="pl-8 flex ">
-            <p class="
-                cursor-pointer 
-                rotate-90 
-                h-12 w-12 
-                bg-colorPrimaryContainerLight dark:bg-colorPrimaryContainerDark 
-                hover:bg-colorSecondaryContainerLight dark:hover:bg-colorSecondaryContainerDark 
-                text-colorOnPrimaryContainerLight dark:text-colorOnPrimaryContainerDark 
-                rounded-2xl 
-                text-[32px] 
-                text-center 
-                font-semibold">
-                S</p>
+    <div id="Toolbar" class="
+    fixed
+    top-0
+    z-50
+    h-14
+    w-full
+    flex px-4 py-2 space-x-4
+    items-center
+    bg-colorSurfaceLight dark:bg-colorSurfaceDark
+    text-colorOnSurfaceDark dark:text-colorOnSurfaceDark
+ 
+     ">
+        <div class="
+                flex
+                jsutify-center
+                h-12 w-12
+                rounded-full
+                cursor-pointer
+                hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark
+             ">
+            <Icon class="m-auto" name="ic:outline-code" size="30px" />
+        </div>
+        <div class="flex-grow" />
+        <div class="flex space-x-1">
+            <div class="
+                flex
+                jsutify-center
+                h-12 w-12
+                rounded-full
+                hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark
+             ">
+                <Icon class="m-auto" name="grommet-icons:github" size="24px" />
+            </div>
+            <div class="
+                flex
+                jsutify-center
+                h-12 w-12
+                rounded-full
+                [&>*]:hover:cursor-pointer
+                hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark">
+                <Icon class="m-auto" name="mdi:telegram" size="24px" />
+            </div>
+            <div class="
+                flex
+                jsutify-center
+                h-12 w-12
+                rounded-full
+                hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark">
+                <Icon class="m-auto" name="mdi:linkedin" size="24px" />
+            </div>
 
         </div>
-        <div v-for="(i, index) in menuItems">
-            <h6 class="
-            Item 
-            sm:text-base
-            transition-colors 
-            duration-300
-            rounded-lg
-            bg-colorPrimaryContainerLight dark:bg-colorPrimaryContainerDark
-            text-colorOnPrimaryContainerLight dark:text-colorOnPrimaryContainerDark
-            font-semibold
-     ">{{ i }}</h6>
-        </div>
-        <div class="flex-grow"></div>
+        <!--
+
+            <div v-for="(i, index) in menuItems">
+                <h6 class="
+                invisible
+                md:visible
+                cursor-pointer
+                py-2 px-3
+                font-semibold
+                text-sm inline-block
+                sm:text-base
+                transition-colors 
+                duration-300
+                rounded-full
+                hover:bg-colorSecondaryContainerLight dark:hover:bg-colorSecondaryContainerDark 
+                text-colorOnPrimaryContainerLight dark:text-colorOnPrimaryContainerDark
+                ">{{ i }}</h6>
+            </div>
+        -->
     </div>
 </template>
 
@@ -38,41 +80,3 @@ function empty() {
 
 }
 </script>
-<style scoped >
-.Toolbar {
-    @apply flex flex-row-reverse;
-    height: 56px;
-    width: 100dvh;
-    @apply p-4;
-    @apply space-x-4;
-    @apply items-center;
-    @apply text-colorOnBackgroundDark;
-    z-index: 100;
-    top: 100%;
-    position: fixed;
-    transform-origin: top left;
-    transform: rotate(-90deg);
-}
-
-.Item {
-    @apply cursor-pointer;
-    @apply font-semibold;
-    @apply text-sm inline-block;
-    @apply py-2 px-3;
-}
-
-.Action {
-    @apply cursor-pointer;
-}
-
-.Action::after {}
-
-.Item:hover {
-    transition: font-weight .1s ease-in-out;
-    @apply transition-colors duration-300;
-    @apply rounded-lg;
-    @apply dark: bg-colorPrimaryContainerDark;
-    @apply darktext-colorOnPrimaryContainerDark;
-    @apply font-semibold;
-}
-</style>

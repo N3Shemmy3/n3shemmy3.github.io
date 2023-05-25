@@ -14,6 +14,7 @@
     "@types/node": "^18",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.4.3",
+    "nuxt-icon": "^0.4.1",
     "postcss": "^8.4.23",
     "push-dir": "^0.4.1",
     "sass": "^1.62.1",

@@ -1,23 +1,15 @@
 <template>
-  <div class="m-auto w-full h-full max-w-screen-lg noSelect">
-    <div class="flex-row">
+  <div
+    class="text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
+  >
+    <div class="max-w-screen-md">
       <Navbar />
-      <div class="content ">
-        <NuxtPage />
-      </div>
+      <NuxtPage />
     </div>
   </div>
 </template>
 
 <script setup>
-import '@/assets/css/tailwind.css';
 </script>
-<style scoped>
-.content {
-  @apply absolute;
-  @apply h-screen w-full;
-  @apply pl-16 pr-4;
-  @apply py-2;
-  @apply overflow-y-auto;
-}
-</style>
+<style scoped></style>
+<style></style>
