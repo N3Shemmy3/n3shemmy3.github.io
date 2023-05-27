@@ -5,6 +5,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "deploy" : "push-dir --dir=.output/public --branch=gh-pages",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
