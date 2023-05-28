@@ -45,7 +45,7 @@
         </div>
       </div>
       <div id="projects-title" class="mt-24">
-        <h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projetcs</h1>
+        <h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projects</h1>
         <p class="text-base mt-1">Projects iv'e worked on.</p>
       </div>
       <div class="h-[100px]"></div>

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   ],
   css: [
     "@/assets/css/tailwind.css",
-    '@/assets/fonts/roobert.css'
+    '@/assets/fonts/product.css'
   ],
 
   postcss: {

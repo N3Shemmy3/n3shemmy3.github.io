@@ -7,7 +7,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    font-family: 'Roobert';
+    font-family: 'Product Sans';
 
 }
 
@@ -16,17 +16,9 @@ body:dark {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    font-family: 'Roobert';
+    font-family: 'Product Sans';
 }
 
-/* main.css */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('./fonts/Roboto-Light.ttf') format('truetype');
-}
 
 .noSelect {
     -webkit-tap-highDark-color: transparent;
