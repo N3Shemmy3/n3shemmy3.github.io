@@ -27,5 +27,3 @@
 
 <script setup>
 </script>
-<style src="assets/css/tailwind.css">
-</style>

@@ -1,6 +1,8 @@
 
 export default defineNuxtConfig({
-  modules: ['nuxt-icon'],
+  modules: [
+    'nuxt-icon',
+  ],
   plugins: [
     '@/plugins/vRipple.js', // only in client side
   ],
