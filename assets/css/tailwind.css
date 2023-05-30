@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-colorBackgroundDark;
+    @apply bg-colorBackgroundLight text-colorOnBackgroundLight;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -12,7 +12,7 @@ body {
 }
 
 body:dark {
-    @apply bg-colorBackgroundDark;
+    @apply bg-colorBackgroundDark text-colorOnBackgroundDark;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
