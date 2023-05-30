@@ -7,7 +7,7 @@
 			<div class="sm:flex sm:space-x-10 space-y-2">
 				<img
 					id="image"
-					class="h-60 w-60 m-auto sm:m-0 rounded-full"
+					class="h-60 w-60 m-auto mt-4 sm:m-0 rounded-full"
 					src="https://avatars.githubusercontent.com/u/67279072?v=4"
 					alt=""
 				/>
