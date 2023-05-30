@@ -43,11 +43,16 @@
 </template>
 
 <script setup lang="ts">
+	interface Menu {
+		icon: string;
+		title: string;
+		url: string;
+	}
 	const languages = ref([
-		{ title: "Java", icon: "nonicons:java-16", action: "" },
-		{ title: "JavaScript", icon: "nonicons:javascript-16", action: "" },
-		{ title: "Html", icon: "nonicons:html-16", action: "" },
-		{ title: "Css", icon: "nonicons:css-16", action: "" },
+		{ title: "Java", icon: "nonicons:java-16", url: "" },
+		{ title: "JavaScript", icon: "nonicons:javascript-16", url: "" },
+		{ title: "Html", icon: "nonicons:html-16", url: "" },
+		{ title: "Css", icon: "nonicons:css-16", url: "" },
 	]);
 </script>
 <style scoped>
