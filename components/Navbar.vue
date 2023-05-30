@@ -39,7 +39,7 @@
 			icon: "ph:telegram-logo",
 			url: "https://t.me/n3shemmy3",
 		},
-		{ title: "Email", icon: "ph:envelope", url: "" },
+		{ title: "Email", icon: "ph:envelope", url: "n3Shemmy3@gmail.com" },
 	]);
 	function empty() {}
 </script>
