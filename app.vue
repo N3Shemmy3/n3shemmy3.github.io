@@ -1,18 +1,12 @@
 <template>
   <div
-    class="h-screen w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
-  >
+    class="h-screen w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"></div>
+
     <Head>
       <Title>Shemmy Nyirenda</Title>
-      <Meta
-        name="description"
-        content="A website i built with nuxt.js to showcase My skills and passions"
-      />
+      <Meta name="description" content="A website i built with nuxt.js to showcase My skills and passions" />
       <meta name="theme-color" content="bg-colorBackgroundLight" />
-      <Style
-        type="text/css"
-        children="body { @apply bg-colorBackgroundLight dark:bg-colorBackgroundDark;  }"
-      />
+      <Style type="text/css" children="body { @apply bg-colorBackgroundLight dark:bg-colorBackgroundDark;  }" />
     </Head>
 
     <div class="max-w-screen-md">
@@ -22,8 +16,7 @@
       </div>
       <FooterBar />
     </div>
-  </div>
-</template>
+  </template>
 
 <script setup>
 </script>
