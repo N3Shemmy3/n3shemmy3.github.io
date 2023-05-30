@@ -28,30 +28,16 @@
 				</div>
 			</div>
 		</div>
-		<!--
-
-            <div v-for="(i, index) in menuItems">
-                <h6 class="
-                invisible
-                md:visible
-                cursor-pointer
-                py-2 px-3
-                font-semibold
-                text-sm inline-block
-                sm:text-base
-                transition-colors 
-                duration-300
-                rounded-full
-                hover:bg-colorSecondaryContainerLight dark:hover:bg-colorSecondaryContainerDark 
-                text-colorOnPrimaryContainerLight dark:text-colorOnPrimaryContainerDark
-                ">{{ i }}</h6>
-            </div>
-        -->
 	</div>
 </template>
 
 <script setup lang="ts">
-	const menuItems = ["About", "Projects", "BlogPost"];
+	const menuItems = ref([
+		{ title: "GitHub", src: "", action: "" },
+		{ title: "Linked-In", src: "", action: "" },
+		{ title: "Telegram", src: "", action: "" },
+		{ title: "Email", src: "", action: "" },
+	]);
 	function empty() {}
 </script>
 
