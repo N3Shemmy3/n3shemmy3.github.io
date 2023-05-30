@@ -8,7 +8,7 @@
 				<img
 					id="image"
 					class="h-60 w-60 m-auto sm:m-0 rounded-full"
-					icon="https://avatars.githubusercontent.com/u/67279072?v=4"
+					src="https://avatars.githubusercontent.com/u/67279072?v=4"
 					alt=""
 				/>
 				<div class="sm:space-y-2 flex flex-col justify-center">
