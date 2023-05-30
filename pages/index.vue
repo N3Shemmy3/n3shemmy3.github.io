@@ -22,7 +22,7 @@
         <p class="text-base text-center">
           A Front-End Software Developer based in Zambia
         </p>
-      </div>
+        
         
       
         <div class="flex m-auto pt-4 space-x-10">
@@ -49,6 +49,8 @@
             class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
           />
            <div class="flex-grow"/>
+        </div>
+      
         </div>
       </div>
       </div>
