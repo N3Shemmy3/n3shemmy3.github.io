@@ -10,21 +10,21 @@
         id="about"
         class="flex flex-col space-y-4 justify-center [&>*]:mx-auto"
       >
-      <div class="sm:flex">
+      <div class="sm:flex sm:space-x-4">
         
         <img
         class="h-60 w-60 rounded-full"
         src="https://avatars.githubusercontent.com/u/67279072?v=4"
         alt=""
         />
-        <div>
-        <h1 class="text-3xl text-center sm:text-[40px]">Shemmy Nyirenda</h1>
+        <div class="sm:space-y-1">
+          <div>
+            <h1 class="text-3xl text-center sm:text-[40px]">Shemmy Nyirenda</h1>
         <p class="text-base text-center">
           A Front-End Software Developer based in Zambia
         </p>
-        
-        
-      
+      </div>
+
         <div class="flex m-auto pt-4 space-x-10">
           <div class="flex-grow"/>
           <Icon
