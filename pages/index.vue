@@ -9,12 +9,13 @@
 			<div id="about" class="flex flex-col space-y-4 justify-center">
 				<div class="sm:flex sm:space-x-10 space-y-2">
 					<img
+						id="image"
 						class="h-60 w-60 m-auto sm:m-0 rounded-full"
 						src="https://avatars.githubusercontent.com/u/67279072?v=4"
 						alt=""
 					/>
 					<div class="sm:space-y-2 flex flex-col justify-center">
-						<div class="space-y-1">
+						<div id="info" class="space-y-1">
 							<h1 class="text-3xl text-center sm:text-[45px]"
 								>Shemmy Nyirenda</h1
 							>
@@ -22,27 +23,12 @@
 								A Front-End Software Developer based in Zambia
 							</p>
 						</div>
-
-						<div class="flex m-auto pt-4 space-x-10">
+						<div id="languages" class="flex m-auto pt-4 space-x-10">
 							<div class="flex-grow" />
 							<Icon
-								title="Java"
-								name="nonicons:java-16"
-								size="30"
-								class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-							/>
-							<Icon
-								name="nonicons:javascript-16"
-								size="30"
-								class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-							/>
-							<Icon
-								name="nonicons:html-16"
-								size="30"
-								class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-							/>
-							<Icon
-								name="nonicons:css-16"
+								v-for="language in languages"
+								:title="language.title"
+								:name="language.src"
 								size="30"
 								class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
 							/>
@@ -60,8 +46,14 @@
 	</div>
 </template>
 
-<script setup lang="ts"></script>
-
+<script setup lang="ts">
+	const languages = ref([
+		{ title: "Java", src: "nonicons:java-16", action: "" },
+		{ title: "JavaScript", src: "nonicons:javascript-16", action: "" },
+		{ title: "Html", src: "nonicons:html-16", action: "" },
+		{ title: "Css", src: "nonicons:css-16", action: "" },
+	]);
+</script>
 <style scoped>
 	.noSelect {
 		-webkit-tap-highdark-color: transparent;
