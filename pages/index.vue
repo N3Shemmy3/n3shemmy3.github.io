@@ -12,7 +12,7 @@
 					alt=""
 				/>
 				<div class="sm:space-y-2 flex flex-col justify-center">
-					<div id="info" class="space-y-1">
+					<div id="info" class="space-y-2">
 						<h1 class="text-3xl text-center sm:text-[45px]">Shemmy Nyirenda</h1>
 						<p class="text-base text-center">
 							A Front-End Software Developer based in Zambia
@@ -22,14 +22,14 @@
 						id="languages"
 						class="flex mx-auto w-9/12 content-center pt-4 justify-between"
 					>
-						<Icon
-							v-for="language in languages"
-							:key="language.icon"
-							:title="language.title"
-							:name="language.icon"
-							size="30"
-							class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-						/>
+						<div v-for="language in languages" v-bind:key="language.icon">
+							<Icon
+								:title="language.title"
+								:name="language.icon"
+								size="30px"
+								class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -49,10 +49,10 @@
 		url: string;
 	}
 	const languages = ref([
-		{ title: "Java", icon: "nonicons:java-16", url: "" },
-		{ title: "JavaScript", icon: "nonicons:javascript-16", url: "" },
-		{ title: "Html", icon: "nonicons:html-16", url: "" },
-		{ title: "Css", icon: "nonicons:css-16", url: "" },
+		{ title: "Java", icon: "nonicons:java-16" },
+		{ title: "JavaScript", icon: "nonicons:javascript-16" },
+		{ title: "Html", icon: "nonicons:html-16" },
+		{ title: "Css", icon: "nonicons:css-16" },
 	]);
 </script>
 <style scoped>
