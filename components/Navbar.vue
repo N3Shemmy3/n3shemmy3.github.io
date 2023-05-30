@@ -11,29 +11,38 @@
 			</div>
 			<div class="flex-grow" />
 			<div class="flex space-x-1">
-				<div
+				<NuxtLink
+					:to="menu.url"
+					target="_blank"
 					v-for="menu in menuItems"
 					v-bind:key="menu.icon"
-					target="_blank"
-					rel="noopener noreferrer"
-					:href="menu.url"
+					@click="onMenuItemCliked(menu)"
 					class="flex cursor-pointer noSelect jsutify-center h-12 w-12 rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
 				>
 					<Icon class="m-auto" :name="menu.icon" size="24px" />
-				</div>
+				</NuxtLink>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
+	interface Menu {
+		icon: string;
+		title: string;
+		url: string;
+	}
 	const menuItems = ref([
 		{
 			title: "GitHub",
 			icon: "ph:github-logo",
 			url: "https://github.com/N3Shemmy3",
 		},
-		{ title: "Linked-In", icon: "ph:linkedin-logo", url: "" },
+		{
+			title: "Linked-In",
+			icon: "ph:linkedin-logo",
+			url: "https://zm.linkedin.com/in/shemmy-nyirenda-7a3681259",
+		},
 		{
 			title: "Telegram",
 			icon: "ph:telegram-logo",
@@ -41,7 +50,7 @@
 		},
 		{ title: "Email", icon: "ph:envelope", url: "n3Shemmy3@gmail.com" },
 	]);
-	function empty() {}
+	function onMenuItemCliked(menu: Menu) {}
 </script>
 
 <style scoped>
