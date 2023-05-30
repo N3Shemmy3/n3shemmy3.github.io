@@ -12,19 +12,11 @@
 			<div class="flex-grow" />
 			<div class="flex space-x-1">
 				<div
-					class="flex noSelect jsutify-center h-12 w-12 rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
+					v-for="menu in menuItems"
+					v-bind:key="menu.icon"
+					class="flex cursor-pointer noSelect jsutify-center h-12 w-12 rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
 				>
-					<Icon class="m-auto" name="ph:github-logo" size="24px" />
-				</div>
-				<div
-					class="flex noSelect justify-center h-12 w-12 rounded-full [&>*]:hover:cursor-pointer hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
-				>
-					<Icon class="m-auto" name="ph:telegram-logo" size="24px" />
-				</div>
-				<div
-					class="flex noSelect justify-center h-12 w-12 rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
-				>
-					<Icon class="m-auto" name="ph:linkedin-logo" size="24px" />
+					<Icon class="m-auto" :name="menu.icon" size="24px" />
 				</div>
 			</div>
 		</div>
@@ -33,10 +25,10 @@
 
 <script setup lang="ts">
 	const menuItems = ref([
-		{ title: "GitHub", src: "", action: "" },
-		{ title: "Linked-In", src: "", action: "" },
-		{ title: "Telegram", src: "", action: "" },
-		{ title: "Email", src: "", action: "" },
+		{ title: "GitHub", icon: "ph:github-logo", action: "" },
+		{ title: "Linked-In", icon: "ph:linkedin-logo", action: "" },
+		{ title: "Telegram", icon: "ph:telegram-logo", action: "" },
+		{ title: "Email", icon: "ph:envelope", action: "" },
 	]);
 	function empty() {}
 </script>

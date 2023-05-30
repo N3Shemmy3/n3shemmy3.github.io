@@ -8,7 +8,7 @@
 				<img
 					id="image"
 					class="h-60 w-60 m-auto sm:m-0 rounded-full"
-					src="https://avatars.githubusercontent.com/u/67279072?v=4"
+					icon="https://avatars.githubusercontent.com/u/67279072?v=4"
 					alt=""
 				/>
 				<div class="sm:space-y-2 flex flex-col justify-center">
@@ -24,9 +24,9 @@
 					>
 						<Icon
 							v-for="language in languages"
-							:key="language.src"
+							:key="language.icon"
 							:title="language.title"
-							:name="language.src"
+							:name="language.icon"
 							size="30"
 							class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
 						/>
@@ -44,10 +44,10 @@
 
 <script setup lang="ts">
 	const languages = ref([
-		{ title: "Java", src: "nonicons:java-16", action: "" },
-		{ title: "JavaScript", src: "nonicons:javascript-16", action: "" },
-		{ title: "Html", src: "nonicons:html-16", action: "" },
-		{ title: "Css", src: "nonicons:css-16", action: "" },
+		{ title: "Java", icon: "nonicons:java-16", action: "" },
+		{ title: "JavaScript", icon: "nonicons:javascript-16", action: "" },
+		{ title: "Html", icon: "nonicons:html-16", action: "" },
+		{ title: "Css", icon: "nonicons:css-16", action: "" },
 	]);
 </script>
 <style scoped>
