@@ -14,6 +14,9 @@
 				<div
 					v-for="menu in menuItems"
 					v-bind:key="menu.icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					:href="menu.url"
 					class="flex cursor-pointer noSelect jsutify-center h-12 w-12 rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
 				>
 					<Icon class="m-auto" :name="menu.icon" size="24px" />
@@ -25,10 +28,18 @@
 
 <script setup lang="ts">
 	const menuItems = ref([
-		{ title: "GitHub", icon: "ph:github-logo", action: "" },
-		{ title: "Linked-In", icon: "ph:linkedin-logo", action: "" },
-		{ title: "Telegram", icon: "ph:telegram-logo", action: "" },
-		{ title: "Email", icon: "ph:envelope", action: "" },
+		{
+			title: "GitHub",
+			icon: "ph:github-logo",
+			url: "https://github.com/N3Shemmy3",
+		},
+		{ title: "Linked-In", icon: "ph:linkedin-logo", url: "" },
+		{
+			title: "Telegram",
+			icon: "ph:telegram-logo",
+			url: "https://t.me/n3shemmy3",
+		},
+		{ title: "Email", icon: "ph:envelope", url: "" },
 	]);
 	function empty() {}
 </script>
