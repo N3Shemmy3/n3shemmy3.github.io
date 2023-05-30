@@ -2,10 +2,10 @@
   <div
     class="w-full h-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark justify-center pt-14 px-4 pb-4 sm:pt-28 sm:px-6">
     <div id="content" class="overflow-auto flex flex-col m-auto max-w-3xl justify-center">
-      <div id="about" class="flex flex-col space-y-4 justify-center [&>*]:mx-auto">
+      <div id="about" class="flex flex-col space-y-4 justify-center ">
         <div class="sm:flex sm:space-x-4">
-
-          <img class="h-60 w-60 m-auto rounded-full" src="https://avatars.githubusercontent.com/u/67279072?v=4" alt="" />
+          <img class="h-60 w-60 m-auto sm:m-0 rounded-full" src="https://avatars.githubusercontent.com/u/67279072?v=4"
+            alt="" />
           <div class="sm:space-y-1">
             <div>
               <h1 class="text-3xl text-center sm:text-[40px]">Shemmy Nyirenda</h1>
