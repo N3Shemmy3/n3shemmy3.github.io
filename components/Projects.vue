@@ -9,7 +9,10 @@
 				class="w-full sm:w-60 rounded-md shadow-sm border border-colorOutlineLight dark:border-colorOutlineDark"
 			>
 				<div id="img-content" class="h-52 w-full">
-					<img src="/svg/undraw_floating_re_xtcj.svg" />
+					<img
+						class="h-full w-full object-fit"
+						src="https://raw.githubusercontent.com/N3Shemmy3/n3shemmy3.github.io/82c1a302a560bfb92f118f026eb4f890bd6c469d/assets/images/svg/undraw_floating_re_xtcj.svg"
+					/>
 				</div>
 				<div id="text-content" class="p-4 space-y-2">
 					<NuxtLink
