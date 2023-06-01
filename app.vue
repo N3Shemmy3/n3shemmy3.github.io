@@ -3,22 +3,9 @@
 		<div
 			class="h-screen w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
 		>
-			<Head>
-				<Title>Shemmy Nyirenda</Title>
-				<Meta
-					name="description"
-					content="A website i built with nuxt.js to showcase My skills and passions"
-				/>
-				<meta name="theme-color" content="bg-colorBackgroundLight" />
-				<Style
-					type="text/css"
-					children="body { @apply bg-colorBackgroundLight dark:bg-colorBackgroundDark;  }"
-				/>
-			</Head>
-
 			<div class="max-w-screen-md">
 				<Navbar />
-				<div class="justify-center pt-14 px-4 pb-4 sm:pt-28 sm:px-6">
+				<div class="justify-centerpt-14 pb-4 px-4 sm:px-6">
 					<NuxtPage />
 				</div>
 				<FooterBar />
@@ -27,4 +14,16 @@
 	</ClientOnly>
 </template>
 
-<script setup></script>
+<script setup>
+	useSeoMeta({
+		title: "Shemmy Nyirenda",
+		ogTitle: "Shemmy Nyirenda",
+		description:
+			"A website i built with nuxt.js to showcase My skills and passions",
+		ogDescription:
+			"A website i built with nuxt.js to showcase My skills and passions",
+		ogImage:
+			"https://api.iconify.design/ph:terminal-window.svg?color=%23888888",
+		twitterCard: "summary_large_image",
+	});
+</script>
