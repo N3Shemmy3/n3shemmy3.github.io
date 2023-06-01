@@ -3,7 +3,10 @@
 		<h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projects</h1>
 		<p class="text-base mt-1">Projects iv'e worked on.</p>
 		<div class="flex flex-col shadow-sm m-2">
-			<div class="h-2/6 p-2 rounded-t-lg bg-colorPrimaryContainerDark">
+			<div
+				id="card"
+				class="h-2/6 p-2 rounded-t-lg bg-colorPrimaryContainerDark"
+			>
 				<Icon name="nonicons:java-16" size="30px" />
 				<h6 class="text-lg">Project Name</h6>
 			</div>
