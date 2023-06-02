@@ -13,7 +13,8 @@ jobs:
       - name: Generate static Nuxt 3 files
         uses: actions/setup-node@v3
         with:
-          node-version: "18.16.0"
+          node-version: "18"
+          check-latest: true
           cache: 'yarn'
       
       - run: |
