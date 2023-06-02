@@ -5,7 +5,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "deploy" : "push-dir --dir=.output/public --branch=gh-pages",
+    "deploy": "push-dir --dir=.output/public --branch=gh-pages",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
@@ -17,7 +17,6 @@
     "nuxt": "^3.4.3",
     "nuxt-icon": "^0.4.1",
     "postcss": "^8.4.23",
-    "push-dir": "^0.4.1",
     "sass": "^1.62.1",
     "sass-loader": "^10.4.1",
     "tailwindcss": "^3.3.2"
