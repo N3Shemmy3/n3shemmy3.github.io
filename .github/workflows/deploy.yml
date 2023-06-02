@@ -15,11 +15,11 @@ jobs:
         with:
           node-version: "18"
           check-latest: true
-          cache: 'yarn'
+          cache: 'npm'
       
       - run: |
-          yarn install
-          yarn generate
+          npm install
+          npm run generate
       - name: Init new repo in $BUILD_FOLDER and commit generated files
         run: |
           grep -rnwl "<link rel=\"prefetch\"" $BUILD_FOLDER | xargs sed -i 's$<link rel="prefetch" href="[^"]*\.\(jpg\|png\|webm\|jpeg\|ttg\|svg\|gif\)">$$g'
