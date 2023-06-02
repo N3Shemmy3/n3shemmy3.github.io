@@ -1,9 +1,9 @@
-ame: Deploy
+name: Deploy
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
