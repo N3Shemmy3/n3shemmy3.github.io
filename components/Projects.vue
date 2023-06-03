@@ -1,5 +1,5 @@
 <template>
-	<div id="projects-title" class="mt-24">
+	<div id="projects-title" class="mt-24 content-center">
 		<h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projects</h1>
 		<p class="text-base mt-1">Projects iv'e worked on.</p>
 		<div class="grid gap-2 sm:gap-4 grid-responsive py-4">
@@ -8,7 +8,7 @@
 				id="card"
 				class="w-full sm:w-60 rounded-md shadow-sm border border-colorOutlineLight dark:border-colorOutlineDark"
 			>
-				<div id="img-content" class="h-52 w-full">
+				<div id="img-content" class="h-36 w-full">
 					<img
 						class="h-full w-full object-fit"
 						src="https://raw.githubusercontent.com/N3Shemmy3/n3shemmy3.github.io/82c1a302a560bfb92f118f026eb4f890bd6c469d/assets/images/svg/undraw_floating_re_xtcj.svg"
@@ -40,6 +40,7 @@
 </template>
 <style>
 	.grid-responsive {
+		grid-area: span;
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	}
 </style>
