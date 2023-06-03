@@ -21,7 +21,7 @@
 				</div>
 				<div
 					id="languages"
-					class="flex mx-auto w-9/12 content-center pt-4 justify-between"
+					class="flex sm:mx-auto w-9/12 content-center pt-4 justify-between"
 				>
 					<div v-for="language in languages" v-bind:key="language.icon">
 						<Icon
