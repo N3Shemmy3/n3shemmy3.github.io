@@ -3,9 +3,9 @@
 		id="content"
 		class="select-none overflow-auto flex flex-col m-auto max-w-screen-lg justify-center bg-colorBackgroundLight text-colorOnBackgroundLight dark:bg-colorBackgroundDark dark:text-colorOnBackgroundDark"
 	>
+		<div class="h-14"></div>
 		<About />
 		<Projects />
-		<div class="h-[1px]"></div>
 	</div>
 </template>
 
