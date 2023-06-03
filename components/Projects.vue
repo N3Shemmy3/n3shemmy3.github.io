@@ -2,7 +2,7 @@
 	<div id="projects-title" class="mt-24">
 		<h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projects</h1>
 		<p class="text-base mt-1">Projects iv'e worked on.</p>
-		<div class="grid gap-4 grid-responsive py-4">
+		<div class="grid gap-2 sm:gap-4 grid-responsive py-4">
 			<div
 				v-for="n in 5"
 				id="card"
