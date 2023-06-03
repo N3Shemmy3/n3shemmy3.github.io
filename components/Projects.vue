@@ -4,7 +4,7 @@
 		<p class="text-base mt-1">Projects iv'e worked on.</p>
 		<div class="grid gap-2 sm:gap-4 grid-responsive py-4">
 			<div
-				v-for="n in 8"
+				v-for="n in 12"
 				id="card"
 				class="w-full sm:w-60 rounded-md shadow-sm border border-colorOutlineLight dark:border-colorOutlineDark"
 			>
