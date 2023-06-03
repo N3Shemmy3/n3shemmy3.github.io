@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="content"
-		class="select-none overflow-auto flex flex-col m-auto max-w-screen-md justify-center bg-colorBackgroundLight text-colorOnBackgroundLight dark:bg-colorBackgroundDark dark:text-colorOnBackgroundDark"
+		class="select-none overflow-auto flex flex-col m-auto max-w-screen-lg justify-center bg-colorBackgroundLight text-colorOnBackgroundLight dark:bg-colorBackgroundDark dark:text-colorOnBackgroundDark"
 	>
 		<About />
 		<Projects />

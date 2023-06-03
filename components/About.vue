@@ -1,17 +1,22 @@
 <template>
-	<div id="about" class="flex flex-col space-y-4 justify-center pt-14 sm:pt-28">
-		<div class="sm:flex sm:space-x-10 space-y-2">
+	<div id="about" class="flex flex-col mb-2">
+		<div class="sm:flex sm:space-x-10 space-y-2 mx-auto">
 			<img
 				id="image"
-				class="h-60 w-60 m-auto mt-4 sm:m-0 rounded-full"
+				class="h-60 w-60 m-auto sm:me-10 rounded-full"
 				src="https://avatars.githubusercontent.com/u/67279072?v=4"
 				alt=""
 			/>
 			<div class="sm:space-y-2 flex flex-col justify-center">
-				<div id="info" class="space-y-2">
-					<h1 class="text-3xl text-center sm:text-[45px]">Shemmy Nyirenda</h1>
-					<p class="text-base text-center">
+				<div id="info" class="">
+					<h1 class="text-3xl text-center sm:text-start sm:text-[45px]"
+						>Shemmy Nyirenda</h1
+					>
+					<p class="text-base text-center sm:text-start mt-4">
 						A Front-End Software Developer based in Zambia
+					</p>
+					<p class="text-base text-center sm:text-start">
+						Below is a small grid of the many tools i know how to use
 					</p>
 				</div>
 				<div

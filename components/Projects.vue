@@ -6,7 +6,7 @@
 			<div
 				v-for="n in 12"
 				id="card"
-				class="w-full sm:w-60 rounded-md shadow-sm border border-colorOutlineLight dark:border-colorOutlineDark"
+				class="w-full rounded-md shadow-sm border border-colorOutlineLight dark:border-colorOutlineDark"
 			>
 				<div id="img-content" class="h-36 w-full">
 					<img
@@ -41,6 +41,6 @@
 <style>
 	.grid-responsive {
 		grid-area: span;
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 	}
 </style>

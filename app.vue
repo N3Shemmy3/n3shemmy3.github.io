@@ -3,9 +3,9 @@
 		<div
 			class="h-screen w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
 		>
-			<div class="max-w-screen-md">
+			<div class="max-w-screen-2xl">
 				<Navbar />
-				<div class="justify-centerpt-14 pb-4 px-4 sm:px-6">
+				<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
 					<NuxtPage />
 				</div>
 				<FooterBar />
