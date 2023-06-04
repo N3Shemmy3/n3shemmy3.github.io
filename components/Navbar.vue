@@ -51,9 +51,9 @@
 		{ title: "Email", icon: "ph:envelope", url: "n3Shemmy3@gmail.com" },
 	]);
 	function contactViaEmail(menu: Menu) {
-		return menu.title == "Email"
+		return menu.title != "Email"
 			? menu.url
-			: "mailto:" + menu.url + "?subject=WebDev&body=Hello!";
+			: "mailto:" + menu.url + "?subject=Me&body=Hello!";
 	}
 	function onMenuItemCliked(menu: Menu) {}
 </script>
