@@ -12,12 +12,14 @@
 					<h1 class="text-3xl text-center sm:text-start sm:text-[45px]"
 						>Shemmy Nyirenda</h1
 					>
-					<p class="text-base text-center sm:text-start mt-4">
-						A Front-End Software Developer based in Zambia
-					</p>
-					<p class="text-base text-center sm:text-start">
-						Below is a small grid of the many tools i know how to use
-					</p>
+					<div class="pt-4 mx-auto sm:m-0">
+						<p class="text-base sm:text-start">
+							A Front-End Software Developer based in Zambia
+						</p>
+						<p class="text-base sm:text-start">
+							Below is a small grid of the many tools i know how to use
+						</p>
+					</div>
 				</div>
 				<div
 					id="languages"
