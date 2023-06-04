@@ -5,7 +5,7 @@
 		>
 			<div class="max-w-screen-2xl">
 				<Navbar />
-				<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
+				<div class="justify-center min-h-full pt-14 pb-4 px-4 sm:px-6">
 					<NuxtPage />
 				</div>
 				<FooterBar />
