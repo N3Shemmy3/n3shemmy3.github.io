@@ -4,7 +4,13 @@ export default defineNuxtConfig({
     'nuxt-icon',
      '@pinia/nuxt',
   ],
-  
+  imports: {
+    dirs: ['./stores'],
+  },
+
+  pinia: {
+    autoImports: ['defineStore', 'acceptHMRUpdate'],
+  },
   plugins: [
     '@/plugins/vRipple.js', // only in client side
   ],
