@@ -12,7 +12,7 @@
 			<div class="flex-grow" />
 			<div class="flex space-x-1">
 				<NuxtLink
-					:to="menu.url"
+					:to="contactViaEmail(menu)"
 					target="_blank"
 					v-for="menu in menuItems"
 					v-bind:key="menu.icon"
@@ -50,6 +50,11 @@
 		},
 		{ title: "Email", icon: "ph:envelope", url: "n3Shemmy3@gmail.com" },
 	]);
+	function contactViaEmail(menu: Menu) {
+		return menu.title == "Email"
+			? menu.url
+			: "mailto:" + menu.url + "?subject=WebDev&body=Hello!";
+	}
 	function onMenuItemCliked(menu: Menu) {}
 </script>
 
