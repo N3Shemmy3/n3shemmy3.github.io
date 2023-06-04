@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="Toolbar"
-		class="fixed sm:relative top-0 z-50 h-14 w-full bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark shadow-sm"
+		class="fixed top-0 z-50 h-14 w-full backdrop-filter bg-opacity-30 border-b dark:border-zinc-800 border-grey-800 backdrop-blur-lg text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 	>
 		<div class="max-w-screen-xl m-auto flex px-4 py-2 space-x-4 items-center">
 			<div
