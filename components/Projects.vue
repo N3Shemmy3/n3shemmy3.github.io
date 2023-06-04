@@ -38,6 +38,9 @@
 		</div>
 	</div>
 </template>
+<script setup lang="ts">
+	onMounted(() => {});
+</script>
 <style>
 	.grid-responsive {
 		grid-area: span;
