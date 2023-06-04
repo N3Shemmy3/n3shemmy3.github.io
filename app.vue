@@ -6,7 +6,6 @@
 			<div class="max-w-screen-2xl">
 				<Navbar />
 				<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
-					{{ appStore.isAppCreated }}
 					<NuxtPage />
 				</div>
 				<FooterBar />
@@ -27,5 +26,4 @@
 			"https://api.iconify.design/ph:terminal-window.svg?color=%23888888",
 		twitterCard: "summary_large_image",
 	});
-	const appStore = useAppStore();
 </script>
