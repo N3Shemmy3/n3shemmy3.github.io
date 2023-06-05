@@ -17,7 +17,7 @@
 			</div>
 			<div
 				ref="languages-div"
-				class="flex mx-auto content-center p-4 space-x-8"
+				class="flex mx-auto mb-4 content-center p-4 space-x-8"
 			>
 				<div v-for="language in languages" v-bind:key="language.icon">
 					<Icon
@@ -29,12 +29,12 @@
 				</div>
 			</div>
 			<NuxtLink
+				class="flex mx-auto"
 				to="mailto:n3Shemmy3@gmail.com?subject=Me&body=Hello!"
 				target="_blank"
 			>
 				<button
-					v-Ripple
-					class="text-base sm:text-lg flex outline-none mx-auto my-4 px-8 py-2 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
+					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
 					>Hire me
 				</button>
 			</NuxtLink>
