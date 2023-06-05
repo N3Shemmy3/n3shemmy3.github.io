@@ -3,10 +3,11 @@
 		<div
 			class="h-screen w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
 		>
-			<div class="max-w-screen-2xl">
+			<SplashScreen :v-if="!isAppCreated" />
+			<div :v-show="isAppCreated" class="max-w-screen-2xl">
 				<Navbar />
-				<div class="justify-center min-h-[800px] pt-14 pb-4 px-4 sm:px-6">
-					<NuxtPage />
+				<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
+					<NuxtPage class="animate-from-bottom" />
 				</div>
 				<FooterBar />
 			</div>
@@ -15,6 +16,14 @@
 </template>
 
 <script setup>
+	const isAppCreated = ref(false);
+
+	onMounted(() => {
+		setTimeout(() => {
+			isAppCreated.value = true;
+		}, 1000);
+	});
+
 	useSeoMeta({
 		title: "Shemmy Nyirenda",
 		ogTitle: "Shemmy Nyirenda",
@@ -27,3 +36,19 @@
 		twitterCard: "summary_large_image",
 	});
 </script>
+<style scoped>
+	.animate-from-bottom {
+		position: relative;
+		animation: animatebottom 0.4s;
+	}
+	@keyframes animatebottom {
+		from {
+			bottom: -300px;
+			opacity: 0;
+		}
+		to {
+			bottom: 0;
+			opacity: 1;
+		}
+	}
+</style>

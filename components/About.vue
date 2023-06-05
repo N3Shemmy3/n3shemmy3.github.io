@@ -14,7 +14,7 @@
 					>
 					<div class="pt-4 mx-auto sm:m-0">
 						<p class="text-base text-center sm:text-start">
-							A Front-End Software Developer based in Zambia
+							A Front-End Web Developer
 						</p>
 					</div>
 				</div>

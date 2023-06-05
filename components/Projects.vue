@@ -1,5 +1,5 @@
 <template>
-	<div id="projects-title" class="mt-24 content-center">
+	<div id="projects-title" class="mt-24 content-center min-h-[500px]">
 		<h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projects</h1>
 		<p class="text-base mt-1">Projects iv'e worked on.</p>
 		<div class="grid gap-4 grid-responsive py-4">
@@ -38,9 +38,7 @@
 		</div>
 	</div>
 </template>
-<script setup lang="ts">
-	onMounted(() => {});
-</script>
+<script setup lang="ts"></script>
 <style>
 	.grid-responsive {
 		grid-area: span;

@@ -1,9 +1,8 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 body {
-    @apply bg-colorBackgroundLight text-colorOnBackgroundLight;
+    @apply bg-colorBackgroundDark text-colorOnBackgroundDark;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -12,7 +11,6 @@ body {
 }
 
 body:dark {
-    @apply bg-colorBackgroundDark text-colorOnBackgroundDark;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -20,6 +18,7 @@ body:dark {
 }
 
 
+@tailwind utilities;
 .noSelect {
     -webkit-tap-highDark-color: transparent;
     -webkit-touch-callout: none;
