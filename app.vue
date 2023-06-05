@@ -1,13 +1,12 @@
 <template>
 	<ClientOnly>
 		<div
-			class="h-screen w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
+			class="h-full w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
 		>
-			<SplashScreen :v-if="!isAppCreated" />
-			<div :v-show="isAppCreated" class="max-w-screen-2xl">
+			<div class="max-w-screen-2xl h-full">
 				<Navbar />
 				<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
-					<NuxtPage class="animate-from-bottom" />
+					<NuxtPage />
 				</div>
 				<FooterBar />
 			</div>
