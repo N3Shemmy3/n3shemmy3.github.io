@@ -1,36 +1,58 @@
 <template>
 	<div id="about" class="flex flex-col mb-2">
-		<div class="sm:flex sm:space-x-10 space-y-2 mx-auto">
-			<img
-				id="image"
-				class="h-60 w-60 m-auto sm:me-10 rounded-full"
-				src="https://avatars.githubusercontent.com/u/67279072?v=4"
-				alt=""
-			/>
-			<div class="sm:space-y-2 flex flex-col justify-center">
-				<div id="info" class="mx-auto">
-					<h1 class="text-3xl text-center sm:text-start sm:text-[45px]"
-						>Shemmy Nyirenda</h1
-					>
-					<div class="pt-4 mx-auto sm:m-0">
-						<p class="text-base text-center sm:text-start">
-							A Front-End Web Developer
-						</p>
-					</div>
-				</div>
-				<div
-					id="languages"
-					class="flex mx-auto sm:m-0 w-9/12 content-center pt-4 justify-between"
+		<div class="sm:space-y-2 flex flex-col justify-center m-auto">
+			<div id="info" class="mt-20 sm:space-y-2">
+				<h1
+					class="text-[60px] sm:text-[80px] text-center text-colorPrimaryLight dark:text-colorPrimaryDark"
 				>
-					<div v-for="language in languages" v-bind:key="language.icon">
-						<Icon
-							:title="language.title"
-							:name="language.icon"
-							size="30px"
-							class="transition-color noSelect duration-250 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-						/>
-					</div>
+					Hi,</h1
+				>
+				<h1 class="text-2xl text-center sm:text-start sm:text-[50px]">
+					I'm Shemmy Nyirenda
+				</h1>
+
+				<p class="text-base sm:text-lg text-center"
+					>A Passionate Web Developer
+				</p>
+			</div>
+			<div id="languages" class="flex mx-auto content-center p-4 space-x-8">
+				<div v-for="language in languages" v-bind:key="language.icon">
+					<Icon
+						:title="language.title"
+						:name="language.icon"
+						size="30px"
+						class="transition-color noSelect duration-250 hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
+					/>
 				</div>
+			</div>
+			<div>
+				<dialog
+					class="h-fit w-60 p-4 space-y-2 select-none rounded-lg bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+					ref="dialog"
+				>
+					<h1 class="text-2xl"> Hello </h1>
+					<p
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+						debitis voluptatibus tempore consequatur explicabo vero sequi earum.
+						Officia alias quis reiciendis quaerat, nihil praesentium culpa,
+						minus illo ducimus placeat dolorum!</p
+					>
+					<div class="pt-2">
+						<button
+							v-Ripple
+							class="text-base px-4 py-1 outline-none rounded-md bg-colorPrimaryLight dark:bg-colorcDark"
+							@click="dialog.close()"
+							>Close
+						</button>
+						<div class="flex-grow" />
+					</div>
+				</dialog>
+				<button
+					v-Ripple
+					class="text-base sm:text-lg flex outline-none mx-auto my-4 px-8 py-2 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
+					@click="dialog.showModal()"
+					>Hire me
+				</button>
 			</div>
 		</div>
 	</div>
@@ -48,4 +70,30 @@
 		{ title: "Html", icon: "nonicons:html-16" },
 		{ title: "Css", icon: "nonicons:css-16" },
 	]);
+
+	const dialog = ref();
+
+	onMounted(() => {});
 </script>
+<style scoped>
+	dialog {
+		display: flex;
+		display: block;
+	}
+	dialog[open] {
+		animation: myFadeIn 2s ease-in-out;
+	}
+
+	@keyframes myFadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	dialog::backdrop {
+		background-color: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(3px);
+	}
+</style>

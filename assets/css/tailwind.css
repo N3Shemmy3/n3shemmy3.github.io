@@ -7,10 +7,11 @@ body {
     width: 100vw;
     overflow-x: hidden;
     font-family: 'Product Sans', sans-serif;
-
+    
 }
 
-body:dark {
+dark\:body:dark {
+    @apply bg-colorBackgroundDark text-colorOnBackgroundDark;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
