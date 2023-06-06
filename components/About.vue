@@ -30,6 +30,7 @@
 			</div>
 			<NuxtLink
 				class="flex mx-auto"
+				v-Ripple
 				to="mailto:n3Shemmy3@gmail.com?subject=Me&body=Hello!"
 				target="_blank"
 			>
@@ -66,8 +67,6 @@
 			icon: "nonicons:css-16",
 		},
 	]);
-
-	onMounted(() => {});
 </script>
 
 <style scoped></style>

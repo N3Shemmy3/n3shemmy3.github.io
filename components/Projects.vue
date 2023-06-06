@@ -2,50 +2,80 @@
 	<div id="projects-title" class="mt-24 content-center">
 		<h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projects</h1>
 		<p class="text-base mt-1">Projects iv'e worked on.</p>
-		<div class="grid gap-4 grid-responsive py-4">
+		<div class="mx-auto grid gap-4 grid-responsive py-4">
 			<div
-				v-for="n in 12"
+				v-for="repository in repositories"
+				:key="repository.repo"
 				id="card"
-				class="w-full rounded-md shadow-sm border border-colorOutlineLight dark:border-colorOutlineDark"
+				class="w-full break-words flex flex-col rounded-md shadow-sm border border-colorOutlineLight dark:border-colorOutlineDark"
 			>
-				<div id="img-content" class="h-36 w-full">
-					<img
-						class="h-full w-full object-fit"
-						src="https://raw.githubusercontent.com/N3Shemmy3/n3shemmy3.github.io/82c1a302a560bfb92f118f026eb4f890bd6c469d/assets/images/svg/undraw_floating_re_xtcj.svg"
-					/>
+				<div id="text-content" class="p-4 space-y-2 flex-1">
+					<h6 class="text-2xl sm:text-[22px] font-medium">{{
+						repository.repo.charAt(0).toUpperCase() + repository.repo.slice(1)
+					}}</h6>
+
+					<p class="text-base font-light">{{ repository.description }}</p>
 				</div>
-				<div id="text-content" class="p-4 space-y-2">
+				<div class="flex p-4 pt-0 space-x-3">
 					<NuxtLink
-						class="cursor-pointer w-fit hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
+						v-if="repository.website"
+						v-Ripple
+						:to="repository.website"
+						target="_blank"
 					>
-						<h6 class="text-2xl font-semibold">Project Name</h6>
-					</NuxtLink>
-					<p class="text-base"
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p
-					>
-					<div class="flex pt-2 space-x-3">
 						<button
 							v-Ripple
-							class="text-base outline-none px-4 py-2 rounded-lg bg-colorPrimaryLight"
+							class="text-base outline-none px-4 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
 						>
 							<Icon class="mr-1" name="ph:link" />
 							live
 						</button>
+					</NuxtLink>
+					<NuxtLink v-Ripple :to="repository.link" target="_blank">
 						<button
 							v-Ripple
-							class="text-base outline-none px-4 py-1 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
+							class="text-base outline-none px-4 py-2 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
 						>
 							<Icon class="mr-1" name="ph:github-logo" />
 							code
 						</button>
-					</div>
+					</NuxtLink>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
-<script setup lang="ts"></script>
-<style>
+<script setup lang="ts">
+	interface Repository {
+		owner: string;
+		repo: string;
+		link: string;
+		image: string;
+		language: string;
+		languageColor: string;
+		stars: string;
+		forks: number;
+		description?: string;
+		website?: string;
+	}
+	const repositories = ref(new Array<Repository>());
+	const url = "https://gh-pinned-repos.egoist.dev/?username=N3Shemmy3";
+	async function getData(url: string) {
+		try {
+			const response = await fetch(url);
+			const data = await response.json();
+			repositories.value = data;
+			console.log(data);
+		} catch (error) {
+			// Error handling here
+			console.log(error);
+		}
+	}
+	onMounted(() => {
+		getData(url);
+	});
+</script>
+<style scoped>
 	.grid-responsive {
 		grid-area: span;
 		grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
