@@ -27,7 +27,7 @@
 							v-Ripple
 							class="text-base outline-none px-4 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
 						>
-							<Icon class="mr-1" name="ph:link" />
+							<Icon class="me-1" name="ph:link" />
 							live
 						</button>
 					</NuxtLink>
@@ -36,7 +36,7 @@
 							v-Ripple
 							class="text-base outline-none px-4 py-2 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
 						>
-							<Icon class="mr-1" name="ph:github-logo" />
+							<Icon class="me-1" name="ph:github-logo" />
 							code
 						</button>
 					</NuxtLink>

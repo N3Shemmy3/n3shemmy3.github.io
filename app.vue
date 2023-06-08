@@ -1,17 +1,16 @@
 <template>
-	<ClientOnly>
-		<div
-			class="h-full w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
-		>
-			<div class="max-w-screen-2xl h-full">
-				<Navbar />
-				<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
-					<NuxtPage />
-				</div>
-				<FooterBar />
+	<div
+		class="select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
+	>
+		<div class="max-w-screen-2xl">
+			<Navbar />
+			<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
+				<NuxtPage />
 			</div>
+			<div class="flex-1" />
+			<FooterBar />
 		</div>
-	</ClientOnly>
+	</div>
 </template>
 
 <script setup>
@@ -49,5 +48,8 @@
 			bottom: 0;
 			opacity: 1;
 		}
+	}
+	.spacer {
+		flex: 1;
 	}
 </style>

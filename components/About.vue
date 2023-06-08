@@ -28,12 +28,7 @@
 					/>
 				</div>
 			</div>
-			<NuxtLink
-				class="flex mx-auto"
-				v-Ripple
-				to="mailto:n3Shemmy3@gmail.com?subject=Me&body=Hello!"
-				target="_blank"
-			>
+			<NuxtLink class="flex mx-auto" v-Ripple to="/contact">
 				<button
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
 					>Hire me

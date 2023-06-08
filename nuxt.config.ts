@@ -1,4 +1,10 @@
 export default defineNuxtConfig({
+    app: {
+        buildAssetsDir: '/_nuxt/',
+        head: {
+            link: [{ rel: 'icon', type: 'image/png', href: "https://api.iconify.design/ph:terminal-window.svg?color=%23888888" }]
+        },
+    },
   modules: [
     'nuxt-icon',
   ],

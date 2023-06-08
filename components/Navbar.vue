@@ -51,11 +51,14 @@
 			icon: "ph:linkedin-logo",
 			url: "https://zm.linkedin.com/in/shemmy-nyirenda-7a3681259",
 		},
+		/*
+		 
 		{
 			title: "Telegram",
 			icon: "ph:telegram-logo",
 			url: "https://t.me/n3shemmy3",
 		},
+		*/
 		{ title: "Email", icon: "ph:envelope", url: "n3Shemmy3@gmail.com" },
 	]);
 	function contactViaEmail(menu: Menu) {
