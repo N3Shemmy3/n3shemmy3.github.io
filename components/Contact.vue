@@ -39,9 +39,6 @@
 					required="true"
 				></textarea>
 
-				<div class="success p-4" v-if="isSuccess"
-					>We received your submission, thank you!</div
-				>
 				<button
 					:disabled="loading"
 					v-if="name.length + message.length > 50"
@@ -58,6 +55,8 @@
 <script lang="ts" setup>
 	import axios from "axios";
 
+	const emit = defineEmits(["OnSubmit"]);
+
 	const loading = ref(false);
 	const name = ref("");
 	const email = ref("");
@@ -72,6 +71,7 @@
 		return false;
 	}
 	function onSubmit() {
+		emit("OnSubmit");
 		loading.value = true;
 		let data = {
 			name: name.value,
@@ -91,6 +91,7 @@
 			.then(
 				(response) => {
 					isSuccess.value = response.data.success ? true : false;
+					if (isSuccess.value) alert("Email sent Sucessfully");
 				},
 				(response) => {}
 			);

@@ -39,7 +39,7 @@
 			ref="dialog"
 			class="w-full mx-4 sm:max-w-md sm:mx-auto rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 		>
-			<Contact />
+			<Contact @onSubmit="dialog.close()" />
 		</dialog>
 	</div>
 </template>
@@ -73,6 +73,7 @@
 
 <style scoped>
 	dialog::backdrop {
+		backdrop-filter: blur(8px);
 		background: rgba(23, 22, 22, 0.469);
 	}
 </style>
