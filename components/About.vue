@@ -35,6 +35,7 @@
 					@click="dialog.showModal()"
 					>Resume
 				</button>
+				<div class="w-4" />
 				<button
 					v-Ripple
 					class="flex mx-auto text-base sm:text-lg outline-none px-8 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
@@ -45,6 +46,8 @@
 		</div>
 		<dialog
 			ref="dialog"
+			style="padding: 0"
+			@click="dialog.close()"
 			class="w-full mx-4 sm:max-w-md sm:mx-auto rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 		>
 			<Contact @onSubmit="dialog.close()" />

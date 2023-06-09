@@ -1,5 +1,5 @@
 <template>
-	<div class="space-y-4">
+	<div class="space-y-4 p-4">
 		<div class="">
 			<h6 class="text-2xl">Send me an email</h6>
 			<p class="text-sm">I'll get back to you as soon as possible</p>
