@@ -66,7 +66,15 @@
 			? menu.url
 			: "mailto:" + menu.url + "?subject=Me&body=Hello!";
 	}
-	function onMenuItemCliked(menu: Menu) {}
+	function onMenuItemCliked(menu: Menu) {
+		switch (menu.title.toLowerCase()) {
+			case "email":
+				break;
+
+			default:
+				break;
+		}
+	}
 </script>
 
 <style scoped>
