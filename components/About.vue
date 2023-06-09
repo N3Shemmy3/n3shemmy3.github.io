@@ -71,4 +71,8 @@
 	const dialog = ref();
 </script>
 
-<style scoped></style>
+<style scoped>
+	dialog::backdrop {
+		background: rgba(23, 22, 22, 0.469);
+	}
+</style>
