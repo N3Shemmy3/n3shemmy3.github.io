@@ -28,12 +28,20 @@
 					/>
 				</div>
 			</div>
-			<button
-				v-Ripple
-				class="flex mx-auto text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
-				@click="dialog.showModal()"
-				>Hire me
-			</button>
+			<div class="flex">
+				<button
+					v-Ripple
+					class="flex mx-auto text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
+					@click="dialog.showModal()"
+					>Resume
+				</button>
+				<button
+					v-Ripple
+					class="flex mx-auto text-base sm:text-lg outline-none px-8 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
+					@click="dialog.showModal()"
+					>Hire me
+				</button>
+			</div>
 		</div>
 		<dialog
 			ref="dialog"

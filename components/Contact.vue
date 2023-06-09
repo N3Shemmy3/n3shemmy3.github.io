@@ -11,7 +11,7 @@
 			method="POST"
 		>
 			<div class="flex flex-col">
-				<label>Email</label>
+				<label>Your Email</label>
 				<input
 					class="form-control bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnBackgroundLight dark:text-colorOnBackgroundDark focus:border-colorSecondaryLight dark:focus:border-colorSecondaryDark"
 					type="email"
@@ -55,7 +55,7 @@
 <script lang="ts" setup>
 	import axios from "axios";
 
-	const emit = defineEmits(["OnSubmit"]);
+	const emit = defineEmits(["OnSubmit", "onEmailSent"]);
 
 	const loading = ref(false);
 	const name = ref("");
@@ -83,7 +83,7 @@
 			return;
 		}
 		axios
-			.post("https://getform.io/f/02aaa32c-5952-4093-86f6-e0369c0981b4", data, {
+			.post("https://getform.io/f/762a8fe3-5bc4-418f-ad93-b244cf828f79", data, {
 				headers: {
 					Accept: "application/json",
 				},
@@ -91,7 +91,8 @@
 			.then(
 				(response) => {
 					isSuccess.value = response.data.success ? true : false;
-					if (isSuccess.value) alert("Email sent Sucessfully");
+					if (isSuccess.value) alert("Email sent successfully");
+					else alert("An error ocurred");
 				},
 				(response) => {}
 			);
