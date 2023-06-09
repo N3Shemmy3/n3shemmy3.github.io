@@ -8,7 +8,7 @@
 			class="space-y-2"
 			accept-charset="UTF-8"
 			v-on:submit.prevent="onSubmit()"
-			method="POST"
+			method="POST && dialog"
 		>
 			<div class="flex flex-col">
 				<label>Your Email</label>
