@@ -30,7 +30,7 @@
 			</div>
 			<button
 				v-Ripple
-				class="flex text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
+				class="flex mx-auto text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
 				@click="dialog.showModal()"
 				>Hire me
 			</button>
