@@ -1,15 +1,34 @@
 @tailwind base;
 @tailwind components;
 
-html,
-body {
-	@apply bg-colorBackgroundLight text-colorOnBackgroundLight;
-	margin: 0;
-	position: absolute;
-	height: 100%;
-	width: 100vw;
-	overflow-x: hidden;
-	font-family: "Product Sans", sans-serif;
+@media (prefers-color-scheme: light) {
+	html,
+	body {
+		@apply bg-colorBackgroundLight text-colorOnBackgroundLight;
+		margin: 0;
+		position: absolute;
+		height: 100%;
+		width: 100vw;
+		overflow-x: hidden;
+		font-family: "Product Sans", sans-serif;
+	}
+
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+		border-radius: 8px;
+		@apply bg-colorPrimaryContainerLight;
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+		@apply bg-colorPrimaryContainerLight;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+		@apply bg-colorPrimaryLight;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,22 +60,6 @@ body {
 		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 		@apply bg-colorPrimaryDark;
 	}
-}
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-	border-radius: 8px;
-	@apply bg-colorPrimaryContainerLight;
-}
-
-::-webkit-scrollbar {
-	width: 8px;
-	@apply bg-colorPrimaryContainerLight;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-	@apply bg-colorPrimaryLight;
 }
 
 @tailwind utilities;

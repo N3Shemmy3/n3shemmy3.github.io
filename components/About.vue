@@ -28,13 +28,19 @@
 					/>
 				</div>
 			</div>
-			<NuxtLink class="flex mx-auto" v-Ripple to="/contact">
-				<button
-					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border border-colorOutlineLight hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
-					>Hire me
-				</button>
-			</NuxtLink>
+			<button
+				v-Ripple
+				class="flex text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
+				@click="dialog.showModal()"
+				>Hire me
+			</button>
 		</div>
+		<dialog
+			ref="dialog"
+			class="w-full mx-4 sm:max-w-md sm:mx-auto rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+		>
+			<Contact />
+		</dialog>
 	</div>
 </template>
 
@@ -62,6 +68,7 @@
 			icon: "nonicons:css-16",
 		},
 	]);
+	const dialog = ref();
 </script>
 
 <style scoped></style>

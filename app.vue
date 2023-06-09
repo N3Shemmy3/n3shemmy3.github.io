@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
+		class="w-full select-none text-colorOnBackgroundLight dark:text-colorOnBackgroundDark bg-colorBackgroundLight dark:bg-colorBackgroundDark"
 	>
 		<div class="max-w-screen-2xl">
 			<Navbar />
