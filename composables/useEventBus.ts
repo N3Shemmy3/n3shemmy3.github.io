@@ -1,11 +1,11 @@
 import mitt from "mitt";
 
-interface modalEvent {
-	modalName: string;
-	showModal: boolean;
+interface Modal {
+	name: string;
+	show: Boolean;
 }
 type ApplicationEvents = {
-	"modal:toggle": modalEvent;
+	"modal:toggle": Modal;
 	"event:onClick": any;
 };
 

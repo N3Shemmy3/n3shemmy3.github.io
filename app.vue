@@ -31,6 +31,12 @@
 		}, 1000);
 	});
 
+	useListen("modal:toggle", (modal) => {
+		if (modal.name == "contact") {
+			if (modal.show) dialog.$event.showModal();
+		}
+	});
+
 	useSeoMeta({
 		title: "Shemmy Nyirenda",
 		ogTitle: "Shemmy Nyirenda",
