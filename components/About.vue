@@ -71,8 +71,8 @@
 		},
 	]);
 
-	function showModal(modalName:string ,show: Boolean) {
-		useEvent("modal:toggle", {name: modalName, show: show});
+	function showModal(name:string ,show: Boolean) {
+		useEvent("modal:toggle", {name: name, visible: show});
 	}
 </script>
 

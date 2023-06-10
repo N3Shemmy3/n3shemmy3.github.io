@@ -2,7 +2,7 @@ import mitt from "mitt";
 
 interface Modal {
 	name: string;
-	show: Boolean;
+	visible: Boolean;
 }
 type ApplicationEvents = {
 	"modal:toggle": Modal;
