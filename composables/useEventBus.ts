@@ -5,7 +5,7 @@ interface Modal {
 	visible: Boolean;
 }
 type ApplicationEvents = {
-	"modal:toggle": Modal;
+	modal: Modal;
 	"event:onClick": any;
 };
 

@@ -31,7 +31,7 @@
 		}, 1000);
 	});
 
-	useListen("modal:toggle", (modal) => {
+	useListen("modal", (modal) => {
 		if (modal.name == "contact") {
 			if (modal.show) dialog.showModal();
 			else dialog.hide();
