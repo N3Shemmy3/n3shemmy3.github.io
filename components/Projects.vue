@@ -65,11 +65,7 @@
 			const response = await fetch(url);
 			const data = await response.json();
 			repositories.value = data;
-			console.log(data);
-		} catch (error) {
-			// Error handling here
-			console.log(error);
-		}
+		} catch (error) {}
 	}
 	onMounted(() => {
 		getData(url);
