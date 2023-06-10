@@ -3,16 +3,12 @@
 		<div class="sm:space-y-2 flex flex-col justify-center m-auto">
 			<div ref="info" class="mt-20 sm:space-y-2">
 				<h1
-					class="text-[60px] sm:text-[80px] text-center text-colorPrimaryLight dark:text-colorPrimaryDark"
+					class="text-[55px] sm:text-[70px] text-center text-colorPrimaryLight dark:text-colorPrimaryDark"
 				>
-					Hello there!</h1
+					Hello there,</h1
 				>
-				<h1 class="text-2xl text-center sm:text-start sm:text-[50px]">
-					I'm Shemmy Nyirenda
-				</h1>
-
-				<p class="text-base sm:text-lg text-center"
-					>A Passionate Web Developer
+				<p class="text-lg sm:text-2xl text-center">
+					I'm Shemmy Nyirenda a passionate web developer
 				</p>
 			</div>
 			<div
