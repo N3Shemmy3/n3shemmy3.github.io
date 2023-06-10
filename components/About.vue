@@ -31,26 +31,18 @@
 			<div class="flex mx-auto">
 				<button
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
-					@click="dialog.showModal()"
+					@click="showModal("contact",true)"
 					>Resume
 				</button>
 				<div class="w-4" />
 				<button
 					v-Ripple
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
-					@click="dialog.showModal()"
+					@click="showModal("contact", true)"
 					>Hire me
 				</button>
 			</div>
 		</div>
-		<dialog
-			ref="dialog"
-			style="padding: 0"
-			@click="$event.target === dialog ? dialog.close() : none()"
-			class="w-full mx-4 sm:max-w-md sm:mx-auto rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
-		>
-			<Contact @onSubmit="dialog.close()" />
-		</dialog>
 	</div>
 </template>
 
@@ -78,13 +70,10 @@
 			icon: "nonicons:css-16",
 		},
 	]);
-	const dialog = ref();
-	function none() {}
+
+	function showModal(modalName:string ,show: Boolean) {
+		useEvent("modal:toggle", null);
+	}
 </script>
 
-<style scoped>
-	dialog::backdrop {
-		backdrop-filter: blur(8px);
-		background: rgba(23, 22, 22, 0.469);
-	}
-</style>
+<style scoped></style>

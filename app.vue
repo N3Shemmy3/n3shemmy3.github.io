@@ -10,10 +10,19 @@
 			<div class="flex-1" />
 			<FooterBar />
 		</div>
+		<dialog
+			ref="dialog"
+			style="padding: 0"
+			@click="$event.target === dialog ? dialog.close() : none()"
+			class="w-full mx-4 sm:max-w-md sm:mx-auto rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+		>
+			<Contact @onSubmit="dialog.close()" />
+		</dialog>
 	</div>
 </template>
 
 <script setup>
+	const dialog = ref();
 	const isAppCreated = ref(false);
 
 	onMounted(() => {
@@ -35,21 +44,8 @@
 	});
 </script>
 <style scoped>
-	.animate-from-bottom {
-		position: relative;
-		animation: animatebottom 0.4s;
-	}
-	@keyframes animatebottom {
-		from {
-			bottom: -300px;
-			opacity: 0;
-		}
-		to {
-			bottom: 0;
-			opacity: 1;
-		}
-	}
-	.spacer {
-		flex: 1;
+	dialog::backdrop {
+		backdrop-filter: blur(8px);
+		background: rgba(23, 22, 22, 0.469);
 	}
 </style>
