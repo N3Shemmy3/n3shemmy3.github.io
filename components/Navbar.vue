@@ -19,16 +19,14 @@
 			</NuxtLink>
 			<div class="flex-grow" />
 			<div class="flex space-x-1">
-				<NuxtLink
-					:to="contactViaEmail(menu)"
-					target="_blank"
+				<div
 					v-for="menu in menuItems"
 					v-bind:key="menu.icon"
 					@click="onMenuItemCliked(menu)"
 					class="flex cursor-pointer noSelect jsutify-center h-12 w-12 rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
 				>
 					<Icon class="m-auto" :name="menu.icon" size="24px" />
-				</NuxtLink>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -69,9 +67,11 @@
 	function onMenuItemCliked(menu: Menu) {
 		switch (menu.title.toLowerCase()) {
 			case "email":
+				useEvent("modal:event", { name: "contact", visible: true });
 				break;
 
 			default:
+				window.open(menu.url);
 				break;
 		}
 	}

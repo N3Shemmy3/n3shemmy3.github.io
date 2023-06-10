@@ -5,6 +5,7 @@
 			<p class="text-sm">I'll get back to you as soon as possible</p>
 		</div>
 		<form
+			ref="form"
 			class="space-y-2"
 			accept-charset="UTF-8"
 			v-on:submit.prevent="onSubmit()"
@@ -56,6 +57,7 @@
 	import axios from "axios";
 
 	const emit = defineEmits(["OnSubmit", "onEmailSent"]);
+	const form = ref();
 
 	const loading = ref(false);
 	const name = ref("");
@@ -71,6 +73,10 @@
 		return false;
 	}
 	function onSubmit() {
+		if (!isEmail(email.value)) {
+			loading.value = false;
+			return;
+		}
 		emit("OnSubmit");
 		loading.value = true;
 		let data = {
@@ -78,10 +84,6 @@
 			email: email.value,
 			message: message.value,
 		};
-		if (!isEmail(email.value)) {
-			alert("please enter a valid email");
-			return;
-		}
 		axios
 			.post("https://getform.io/f/762a8fe3-5bc4-418f-ad93-b244cf828f79", data, {
 				headers: {
@@ -96,7 +98,11 @@
 				},
 				(response) => {}
 			);
+
 		loading.value = false;
+		email.value = "";
+		name.value = "";
+		message.value = "";
 	}
 </script>
 <style scoped>
