@@ -5,7 +5,7 @@
 				<h1
 					class="text-[60px] sm:text-[80px] text-center text-colorPrimaryLight dark:text-colorPrimaryDark"
 				>
-					Hi,</h1
+					Hello there!</h1
 				>
 				<h1 class="text-2xl text-center sm:text-start sm:text-[50px]">
 					I'm Shemmy Nyirenda
@@ -31,14 +31,14 @@
 			<div class="flex mx-auto">
 				<button
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
-					@click="showModal("contact",true)"
+					@click="showModal('contact', true)"
 					>Resume
 				</button>
 				<div class="w-4" />
 				<button
 					v-Ripple
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
-					@click="showModal("contact", true)"
+					@click="showModal('contact', true)"
 					>Hire me
 				</button>
 			</div>
@@ -71,8 +71,8 @@
 		},
 	]);
 
-	function showModal(name:string ,show: Boolean) {
-		useEvent("modal", {name: name, visible: show});
+	function showModal(name: string, show: boolean) {
+		useEvent("modal:event", { name: name, visible: show });
 	}
 </script>
 

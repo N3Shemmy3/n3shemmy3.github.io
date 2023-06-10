@@ -2,10 +2,10 @@ import mitt from "mitt";
 
 interface Modal {
 	name: string;
-	visible: Boolean;
+	visible: boolean;
 }
 type ApplicationEvents = {
-	modal: Modal;
+	"modal:event": Modal;
 	"event:onClick": any;
 };
 
