@@ -1,7 +1,7 @@
 <template>
 	<div id="about" class="flex flex-col mb-2">
-		<div class="sm:space-y-2 flex flex-col justify-center m-auto">
-			<div ref="info" class="mt-20 sm:space-y-2">
+		<div class="space-y-1 flex flex-col justify-center m-auto">
+			<div ref="info" class="mt-20">
 				<h1
 					class="text-[55px] sm:text-[70px] text-center text-colorPrimaryLight dark:text-colorPrimaryDark"
 				>
