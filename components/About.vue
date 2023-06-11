@@ -7,7 +7,7 @@
 				>
 					Hello there,</h1
 				>
-				<p class="text-lg sm:text-2xl text-center">
+				<p class="text-lg whitespace-normal sm:text-2xl text-center">
 					I'm Shemmy Nyirenda a passionate web developer
 				</p>
 			</div>

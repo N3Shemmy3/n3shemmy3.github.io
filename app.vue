@@ -5,18 +5,18 @@
 		>
 			<div class="max-w-screen-2xl">
 				<Navbar />
+
 				<div class="justify-center pt-14 pb-4 px-4 sm:px-6">
 					<dialog
 						ref="dialog"
 						style="padding: 0"
 						@click="$event.target === dialog ? dialog.close() : none()"
-						class="w-full mx-4 sm:max-w-md sm:mx-auto open:animate-fade-in open:backdrop:animate-fade-in rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+						class="w-full sm:max-w-md mx-auto open:animate-fade-in open:backdrop:animate-fade-in rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 					>
 						<Contact @onSubmit="dialog.close()" />
 					</dialog>
 					<NuxtPage />
 				</div>
-				<div class="flex-1" />
 				<FooterBar />
 			</div> </div
 	></ClientOnly>

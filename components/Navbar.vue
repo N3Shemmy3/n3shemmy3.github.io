@@ -4,17 +4,16 @@
 		class="fixed top-0 z-50 h-14 w-full backdrop-filter bg-opacity-30 border-b dark:border-zinc-800 border-gray-50 firefox:bg-opacity-90 backdrop-blur-lg text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 	>
 		<div class="max-w-screen-xl m-auto flex px-4 py-2 space-x-4 items-center">
-			<NuxtLink class="" to="/">
-				<div class="sm:w-fit w-0">
-					<h4
-						class="text sm:text-2xl hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-						>N3Shemmy3</h4
-					>
-				</div>
+			<NuxtLink class="flex" to="/">
 				<div
-					class="sm:hidden visible flex noSelect justify-center h-12 w-12 rounded-full cursor-pointer hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
+					class="flex noSelect justify-center content-center hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
 				>
-					<Icon class="m-auto" name="ph:terminal-window" size="30px" />
+					<Icon
+						class="sm:inline hidden me-1"
+						name="ph:terminal-window"
+						size="28px"
+					/>
+					<h4 class="text-lg"> N3Shemmy3</h4>
 				</div>
 			</NuxtLink>
 			<div class="flex-grow" />
@@ -78,9 +77,6 @@
 </script>
 
 <style scoped>
-	.text {
-		font-size: 0px;
-	}
 	.noSelect {
 		-webkit-tap-highdark-color: transparent;
 		-webkit-touch-callout: none;
