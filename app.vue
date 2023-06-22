@@ -42,9 +42,15 @@
 	});
 
 	useListen("modal:event", (modal) => {
-		//if (modal.name == "contact") {
-		if (modal.visible) dialog.value.showModal();
-		else dialog.value.close();
+		switch (modal.name) {
+			case "contact":
+				dialog.value.showModal();
+				break;
+
+			case "resume":
+				resume.value.showModal();
+				break;
+		}
 	});
 
 	useSeoMeta({
