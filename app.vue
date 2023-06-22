@@ -15,6 +15,14 @@
 					>
 						<Contact @onSubmit="dialog.close()" />
 					</dialog>
+					<dialog
+						ref="resume"
+						style="padding: 0"
+						@click="$event.target === resume ? resume.close() : none()"
+						class="w-full sm:max-w-md mx-auto open:animate-fade-in open:backdrop:animate-fade-in rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+					>
+						<Reumse />
+					</dialog>
 					<NuxtPage />
 				</div>
 				<FooterBar />
@@ -24,6 +32,7 @@
 
 <script setup>
 	const dialog = ref();
+	const resume = ref();
 	const isAppCreated = ref(false);
 
 	onMounted(() => {

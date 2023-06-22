@@ -25,7 +25,8 @@
   "dependencies": {
     "mitt": "^3.0.0",
     "pug-beautify": "^0.1.1",
-    "vue-material-design-icons": "^5.2.0"
+    "vue-material-design-icons": "^5.2.0",
+    "vue-pdf-embed": "^1.1.6"
   },
   "overrides": {
     "vue": "latest"
