@@ -15,14 +15,6 @@
 					>
 						<Contact @onSubmit="dialog.close()" />
 					</dialog>
-					<dialog
-						ref="resume"
-						style="padding: 0"
-						@click="$event.target === resume ? resume.close() : none()"
-						class="w-full sm:max-w-md mx-auto open:animate-fade-in open:backdrop:animate-fade-in rounded-lg shadow-md bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
-					>
-						<Reumse />
-					</dialog>
 					<NuxtPage />
 				</div>
 				<FooterBar />
@@ -42,13 +34,16 @@
 	});
 
 	useListen("modal:event", (modal) => {
+		console.log(modal.name);
 		switch (modal.name) {
 			case "contact":
 				dialog.value.showModal();
 				break;
 
 			case "resume":
-				resume.value.showModal();
+				window.open(
+					"https://docs.google.com/document/d/1bXxIPboGQN6y2x7AhPei-7kb508BDu25biBhoF8EJXA/edit?usp=sharing"
+				);
 				break;
 		}
 	});

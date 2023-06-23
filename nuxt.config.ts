@@ -1,6 +1,9 @@
 export default defineNuxtConfig({
+	loadingIndicator: {
+		name: "~/assets/SplashScreen.html",
+	},
 	app: {
-		buildAssetsDir: "/_nuxt/",
+		buildAssetsDir: "/app/",
 		head: {
 			link: [
 				{

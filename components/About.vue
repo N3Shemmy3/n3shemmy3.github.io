@@ -27,7 +27,7 @@
 			<div class="flex mx-auto">
 				<button
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
-					@click="showModal('contact', true)"
+					@click="showModal('resume', true)"
 					>Resume
 				</button>
 				<div class="w-4" />
