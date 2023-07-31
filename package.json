@@ -15,7 +15,7 @@
     "@nuxtjs/google-fonts": "^3.0.1",
     "@types/node": "^18",
     "autoprefixer": "^10.4.14",
-    "nuxt": "^3.4.3",
+    "nuxt": "^3.6.5",
     "nuxt-icon": "^0.4.1",
     "postcss": "^8.4.23",
     "sass": "^1.62.1",
