@@ -17,6 +17,7 @@
 					class="form-control bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnBackgroundLight dark:text-colorOnBackgroundDark focus:border-colorSecondaryLight dark:focus:border-colorSecondaryDark"
 					type="email"
 					v-model="email"
+					required="true"
 					placeholder="username@domain.com"
 				/>
 			</div>
@@ -33,16 +34,16 @@
 			<div class="flex flex-col">
 				<label class="text-lg">Body</label>
 				<textarea
-					class="form-control bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnBackgroundLight dark:text-colorOnBackgroundDark focus:border-colorSecondaryLight dark:focus:border-colorSecondaryDark"
-					type="text"
-					v-model="message"
-					placeholder="Hi, ..."
-					required="true"
+				class="form-control bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnBackgroundLight dark:text-colorOnBackgroundDark focus:border-colorSecondaryLight dark:focus:border-colorSecondaryDark"
+				type="text"
+				v-model="message"
+				placeholder="Hi, ..."
+				required="true"
 				></textarea>
-
+				<label class="mt-1 text-sm opacity-40" >Enter atleast 20 characters</label>
+				
 				<button
-					:disabled="loading"
-					v-if="name.length + message.length > 50"
+					:disabled="name.length + message.length <= 21 || loading"
 					v-Ripple
 					class="text-base mt-4 w-full outline-none px-4 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight disabled:opacity-25"
 					type="submit"
