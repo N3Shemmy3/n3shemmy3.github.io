@@ -5,7 +5,7 @@
 
 		<div class="mx-auto grid gap-4 grid-responsive py-4">
 			<Project v-if="repositories.length > 0" v-for="repository in repositories" :id="repository.repo"
-				:key="repository.repo" :repository="repository" />
+				:key="repository.repo" :repo="repository" />
 
 			<ProjectSkeleton v-else v-for="n in 4" :key="n" />
 
