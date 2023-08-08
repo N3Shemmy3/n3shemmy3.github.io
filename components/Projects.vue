@@ -1,13 +1,25 @@
 <template>
-	<div id="projects-title" class="mt-24 content-center">
+	<div
+		id="projects-title"
+		class="mt-24 content-center"
+	>
 		<h1 class="w-full text-start text-3xl m-0 sm:text-3xl">#Projects</h1>
 		<p class="text-base mt-1">Projects i have worked on:</p>
 
 		<div class="mx-auto grid gap-4 grid-responsive py-4">
-			<Project v-if="repositories.length > 0" v-for="repository in repositories" :id="repository.repo"
-				:key="repository.repo" :repo="repository" />
+			<Project
+				v-if="repositories.length > 0"
+				v-for="repository in repositories"
+				:id="repository.repo"
+				:key="repository.repo"
+				:repo="repository"
+			/>
 
-			<ProjectSkeleton v-else v-for="n in 4" :key="n" />
+			<ProjectSkeleton
+				v-else
+				v-for="n in 4"
+				:key="n"
+			/>
 
 		</div>
 	</div>
