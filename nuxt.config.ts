@@ -1,7 +1,4 @@
 export default defineNuxtConfig({
-	loadingIndicator: {
-		name: "~/assets/SplashScreen.html",
-	},
 	app: {
 		buildAssetsDir: "/app/",
 		head: {
@@ -18,9 +15,9 @@ export default defineNuxtConfig({
 
 	/* 
   imports: {
-    dirs: ['./stores'],
+	dirs: ['./stores'],
   },
-    */
+	*/
 	ugins: ["@/plugins/vRipple.js', // "],
 
 	css: ["@/assets/css/tailwind.css", "@/assets/fonts/product.css"],

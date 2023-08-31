@@ -18,7 +18,7 @@
                 props.repo.repo.charAt(0).toUpperCase() + props.repo.repo.slice(1)
             }}</h6>
 
-            <p class="text-base font-light">{{ props.repo.description }}</p>
+            <p class="text-sm font-light">{{ props.repo.description }}</p>
         </div>
         <div class="flex p-4 pt-0 space-x-3">
             <NuxtLink
@@ -36,7 +36,7 @@
                         rounded-lg 
                         bg-colorPrimaryLight 
                         text-colorOnPrimaryLight
-                        text-base 
+                        text-sm
                         "
                 >
                     <Icon
@@ -59,7 +59,7 @@
                         border border-colorOutlineLight 
                         rounded-lg 
                         outline-none 
-                        text-base 
+                        text-sm
                         hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark 
                         hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
                 >
