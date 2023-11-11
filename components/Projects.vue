@@ -35,7 +35,7 @@ interface Repository {
 }
 const repositories = ref(new Array<Repository>());
 const username = 'N3Shemmy3';
-const accessToken = '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';
+const accessToken = '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';
 
 onMounted(() => {
 	getUserReposWithAuth(username, accessToken)
@@ -58,7 +58,7 @@ async function getUserReposWithAuth(username: string, accessToken: string): Prom
 		const headers = new Headers();
 		headers.append('Authorization', `Bearer ${accessToken}`);
 
-		const response = await fetch(apiUrl);
+		const response = await fetch(apiUrl, { headers });
 
 		if (response.status === 403) {
 			const resetTime = parseInt(response.headers.get('X-RateLimit-Reset')!, 10) * 1000; // Convert to milliseconds
