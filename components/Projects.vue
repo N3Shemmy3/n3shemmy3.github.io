@@ -30,7 +30,6 @@ interface Repository {
 	html_url: string;
 	description?: string;
 	stargazers_url: string;
-	forks_url: number;
 	homepage?: string;
 }
 const repositories = ref(new Array<Repository>());
