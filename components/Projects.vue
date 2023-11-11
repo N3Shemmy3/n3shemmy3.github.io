@@ -48,9 +48,6 @@ onMounted(() => {
 						repositories.value.push(item);
 					}
 				});
-				//repositories.value = repos;
-				console.log(repos);
-
 			}
 		});
 });

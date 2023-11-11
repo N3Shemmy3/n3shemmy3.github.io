@@ -18,13 +18,12 @@ export default defineNuxtConfig({
 	dirs: ['./stores'],
   },
 	*/
-	ugins: ["@/plugins/vRipple.js', // "],
+	plugins: ["@/plugins/vRipple.js', // "],
 
 	css: ["@/assets/css/tailwind.css", "@/assets/fonts/product.css"],
 
 	postcss: {
 		plugins: {
-			"postcss-import": {},
 			"tailwindcss/nesting": {},
 			tailwindcss: {},
 			autoprefixer: {},
