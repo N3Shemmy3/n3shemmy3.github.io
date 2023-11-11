@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 	dirs: ['./stores'],
   },
 	*/
-	plugins: ["@/plugins/vRipple.js', // "],
+	plugins: ["@/plugins/vRipple.js"],
 
 	css: ["@/assets/css/tailwind.css", "@/assets/fonts/product.css"],
 

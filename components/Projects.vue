@@ -58,14 +58,15 @@ async function getUserReposWithAuth(username: string, accessToken: string): Prom
 		const headers = new Headers();
 		headers.append('Authorization', `Bearer ${accessToken}`);
 
-		const response = await fetch(apiUrl, { headers });
+		const response = await fetch(apiUrl);
 
 		if (response.status === 403) {
 			const resetTime = parseInt(response.headers.get('X-RateLimit-Reset')!, 10) * 1000; // Convert to milliseconds
 			const currentTime = new Date().getTime();
 			const timeUntilReset = resetTime - currentTime;
-
-			console.warn(`Rate limit exceeded. Please wait for ${timeUntilReset / 1000} seconds before trying again.`);
+			const warning = `Rate limit exceeded. Please wait for ${timeUntilReset / 1000} seconds before trying again.`
+			console.warn(warning);
+			window.alert(warning)
 			return null;
 		}
 
