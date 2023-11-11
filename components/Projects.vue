@@ -35,7 +35,7 @@ interface Repository {
 }
 const repositories = ref(new Array<Repository>());
 const username = 'N3Shemmy3';
-const accessToken = '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';
+const accessToken = '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';
 
 onMounted(() => {
 	getUserReposWithAuth(username, accessToken)
