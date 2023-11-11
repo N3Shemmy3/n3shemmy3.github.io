@@ -15,16 +15,16 @@
             class="p-4 space-y-2 flex-1"
         >
             <h6 class="text-2xl sm:text-[22px] font-medium">{{
-                props.repo.repo.charAt(0).toUpperCase() + props.repo.repo.slice(1)
+                props.repo.name.charAt(0).toUpperCase() + props.repo.name.slice(1)
             }}</h6>
 
-            <p class="text-sm font-light">{{ props.repo.description }}</p>
+            <p class="text-sm font-light">{{ props.repo.description.replace("[pined]", '') }}</p>
         </div>
         <div class="flex p-4 pt-0 space-x-3">
             <NuxtLink
-                v-if="props.repo.website"
+                v-if="props.repo.homepage"
                 v-Ripple
-                :to="props.repo.website"
+                :to="props.repo.homepage"
                 target="_blank"
             >
                 <button
@@ -48,7 +48,7 @@
             </NuxtLink>
             <NuxtLink
                 v-Ripple
-                :to="props.repo.link"
+                :to="props.repo.html_url"
                 target="_blank"
             >
                 <button

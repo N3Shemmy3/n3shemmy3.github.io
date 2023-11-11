@@ -10,8 +10,8 @@
 			<Project
 				v-if="repositories.length > 0"
 				v-for="repository in repositories"
-				:id="repository.repo"
-				:key="repository.repo"
+				:id="repository.name"
+				:key="repository.name"
 				:repo="repository"
 			/>
 
@@ -25,33 +25,65 @@
 	</div>
 </template>
 <script setup lang="ts">
-
 interface Repository {
-	owner: string;
-	repo: string;
-	link: string;
-	image: string;
-	language: string;
-	languageColor: string;
-	stars: string;
-	forks: number;
+	name: string;
+	html_url: string;
 	description?: string;
-	website?: string;
+	stargazers_url: string;
+	forks_url: number;
+	homepage?: string;
 }
 const repositories = ref(new Array<Repository>());
-const url = "https://gh-pinned-repos.egoist.dev/?username=N3Shemmy3";
-async function getData(url: string) {
-	try {
-		const response = await fetch(url);
-		const data = await response.json();
-		repositories.value = data;
-	} catch (error) { }
-}
+const username = 'N3Shemmy3';
+const accessToken = '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';
+
 onMounted(() => {
-	setTimeout(function () {
-		getData(url);
-	}, 2000);
+	getUserReposWithAuth(username, accessToken)
+		.then(repos => {
+			if (repos) {
+				const list = ref(new Array<Repository>());
+				list.value = repos;
+				list.value.forEach((item: Repository) => {
+					if (item.description?.includes("[pined]")) {
+						repositories.value.push(item);
+					}
+				});
+				//repositories.value = repos;
+				console.log(repos);
+
+			}
+		});
 });
+async function getUserReposWithAuth(username: string, accessToken: string): Promise<any | null> {
+	const apiUrl = `https://api.github.com/users/${username}/repos`;
+
+	try {
+		const headers = new Headers();
+		headers.append('Authorization', `Bearer ${accessToken}`);
+
+		const response = await fetch(apiUrl, { headers });
+
+		if (response.status === 403) {
+			const resetTime = parseInt(response.headers.get('X-RateLimit-Reset')!, 10) * 1000; // Convert to milliseconds
+			const currentTime = new Date().getTime();
+			const timeUntilReset = resetTime - currentTime;
+
+			console.warn(`Rate limit exceeded. Please wait for ${timeUntilReset / 1000} seconds before trying again.`);
+			return null;
+		}
+
+		if (!response.ok) {
+			throw new Error(`Failed to fetch user repos. Status: ${response.status}`);
+		}
+
+		const repos = await response.json();
+		return repos;
+	} catch (error) {
+		console.error(error.message);
+		return null;
+	}
+}
+
 </script>
 <style scoped>
 .grid-responsive {
