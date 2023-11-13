@@ -40,7 +40,7 @@
 				<button
 					v-Ripple
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
-					@click="showModal('contact', true)"
+					@click="openEmail()"
 				>Hire me
 				</button>
 			</div>
