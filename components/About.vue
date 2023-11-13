@@ -72,7 +72,12 @@ const languages = ref([
 		icon: "nonicons:css-16",
 	},
 ]);
-
+function openEmail() {
+	var email = "n3shemmy3@gmail.com"
+	var subject = "Job Offer"
+	var body = "Hi Shemmy,"
+	window.location.href = "mailto:" + email + "?" + "subject=" + subject + "&body=" + body;
+}
 function showModal(name: string, show: boolean) {
 	useEvent("modal:event", { name: name, visible: show });
 }
