@@ -33,15 +33,15 @@
 			<div class="flex mx-auto">
 				<button
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
-					@click="showModal('resume', true)"
+					@click="openLink('resume', true)"
 				>Resume
 				</button>
 				<div class="w-4" />
 				<button
 					v-Ripple
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
-					@click="openEmail()"
-				>Hire me
+					@click="openLink('email', true)"
+				>Contact me
 				</button>
 			</div>
 		</div>
@@ -72,13 +72,8 @@ const languages = ref([
 		icon: "nonicons:css-16",
 	},
 ]);
-function openEmail() {
-	var email = "n3shemmy3@gmail.com"
-	var subject = "Job Offer"
-	var body = "Hi Shemmy,"
-	window.location.href = "mailto:" + email + "?" + "subject=" + subject + "&body=" + body;
-}
-function showModal(name: string, show: boolean) {
+
+function openLink(name: string, show: boolean) {
 	useEvent("modal:event", { name: name, visible: show });
 }
 </script>

@@ -38,6 +38,7 @@
 </template>
 
 <script setup lang="ts">
+
 interface Menu {
 	icon: string;
 	title: string;
@@ -55,11 +56,7 @@ const menuItems = ref([
 		url: "https://zm.linkedin.com/in/shemmy-nyirenda-7a3681259",
 	},
 ]);
-function contactViaEmail(menu: Menu) {
-	return menu.title != "Email"
-		? menu.url
-		: "mailto:" + menu.url + "?subject=Me&body=Hello!";
-}
+
 function onMenuItemCliked(menu: Menu) {
 	switch (menu.title.toLowerCase()) {
 		case "email":
