@@ -18,7 +18,7 @@ useListen("modal:event", (modal) => {
 		case "contact":
 			var email = "portfolio.n3shemmy3@gmail.com"
 			var subject = "Job Offer"
-			var body = "Hi Shemmy,"
+			var body = "Hi Shem,"
 			window.location.href = "mailto:" + email + "?" + "subject=" + subject + "&body=" + body;
 			break;
 
