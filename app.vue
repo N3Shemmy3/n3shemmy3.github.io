@@ -16,7 +16,7 @@ useListen("modal:event", (modal) => {
 	console.log(modal.name);
 	switch (modal.name) {
 		case "contact":
-			var email = "n3shemmy3@gmail.com"
+			var email = "portfolio.n3shemmy3@gmail.com"
 			var subject = "Job Offer"
 			var body = "Hi Shemmy,"
 			window.location.href = "mailto:" + email + "?" + "subject=" + subject + "&body=" + body;

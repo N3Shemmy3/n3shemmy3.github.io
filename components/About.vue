@@ -41,7 +41,7 @@
 					v-Ripple
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg bg-colorPrimaryLight text-colorOnPrimaryLight"
 					@click="openLink('email', true)"
-				>Contact me
+				>Contact
 				</button>
 			</div>
 		</div>
