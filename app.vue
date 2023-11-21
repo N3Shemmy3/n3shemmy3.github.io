@@ -13,7 +13,6 @@
 
 <script setup>
 useListen("modal:event", (modal) => {
-	console.log(modal.name);
 	switch (modal.name) {
 		case "contact":
 			var email = "portfolio.n3shemmy3@gmail.com"
@@ -24,7 +23,7 @@ useListen("modal:event", (modal) => {
 
 		case "resume":
 			window.open(
-				"https://docs.google.com/document/d/1bXxIPboGQN6y2x7AhPei-7kb508BDu25biBhoF8EJXA/edit?usp=sharing"
+				"https://docs.google.com/document/d/1mJyOkuEVbRo7IoKJjB5NGdkQFmqOGVm9nkW2VJBZD9Y/edit?usp=sharing"
 			);
 			break;
 	}
