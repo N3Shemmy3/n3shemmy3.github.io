@@ -5,7 +5,7 @@
 	>
 		<div class="max-w-screen-xl m-auto flex px-4 py-2 space-x-4 items-center">
 			<NuxtLink
-				class="flex"
+				class="flex select-none"
 				to="/"
 			>
 				<div
