@@ -32,6 +32,7 @@
 			</div>
 			<div class="flex mx-auto">
 				<button
+				v-if="false"
 					class="text-base sm:text-lg outline-none px-8 py-2 rounded-lg border hover:text-colorPrimaryLight hover:dark:text-colorPrimaryDark hover:border-colorPrimaryLight hover:dark:border-colorPrimaryDark"
 					@click="openLink('resume', true)"
 				>Resume

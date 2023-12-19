@@ -22,9 +22,7 @@ useListen("modal:event", (modal) => {
 			break;
 
 		case "resume":
-			window.open(
-				"https://docs.google.com/document/d/1mJyOkuEVbRo7IoKJjB5NGdkQFmqOGVm9nkW2VJBZD9Y/edit?usp=sharing"
-			);
+
 			break;
 	}
 });
