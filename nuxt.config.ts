@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 			],
 		},
 	},
-	modules: ["nuxt-icon"],
+	modules: ["nuxt-icon", "@nuxtjs/tailwindcss", "nuxt-headlessui", "@nuxt/content"],
 
 	/* 
   imports: {
@@ -21,15 +21,12 @@ export default defineNuxtConfig({
 	plugins: ["@/plugins/vRipple.js"],
 
 	css: ["@/assets/css/tailwind.css", "@/assets/fonts/product.css"],
-
-	postcss: {
-		plugins: {
-			"tailwindcss/nesting": {},
-			tailwindcss: {},
-			autoprefixer: {},
+	components: [
+		{
+			path: '~/components',
+			pathPrefix: false,
 		},
-	},
-
+	],
 	devtools: {
 		enabled: true,
 	},

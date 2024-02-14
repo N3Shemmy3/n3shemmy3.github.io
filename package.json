@@ -3,21 +3,22 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=.output/public --branch=gh-pages",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.11.0",
     "@nuxt/devtools": "^1.0.1",
     "@nuxtjs/google-fonts": "^3.0.1",
     "@types/node": "^18",
     "autoprefixer": "^10.4.14",
+    "nuxt-headlessui": "^1.1.5",
     "nuxt-icon": "^0.4.1",
     "sass": "^1.62.1",
-    "sass-loader": "^10.4.1",
-    "tailwindcss": "^3.3.2"
+    "sass-loader": "^10.4.1"
   },
   "dependencies": {
     "@unhead/shared": "^1.8.3",
