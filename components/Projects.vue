@@ -1,4 +1,5 @@
-<div
+<template>
+	<div
 		id="projects-title"
 		class="mt-24 content-center"
 	>
