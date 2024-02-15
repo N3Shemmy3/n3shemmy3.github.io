@@ -1,0 +1,1 @@
+import{_ as n,o as t,c as s,r,g as _,w as a,d as l}from"./entry.8e872541.js";const d={},f={class:"flex flex-grow min-h-screen px-4 md:px-8"};function i(e,c){return t(),s("div",f,[r(e.$slots,"default")])}const x=n(d,[["render",i]]),p={};function m(e,c){const o=x;return t(),_(o,null,{default:a(()=>[l(" Blog Posts ")]),_:1})}const h=n(p,[["render",m]]);export{h as default};
