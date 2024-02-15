@@ -76,7 +76,7 @@ async function getUserReposWithAuth(username: string, accessToken: string): Prom
 
 		const repos = await response.json();
 		return repos;
-	} catch (error) {
+	} catch (error: any) {
 		console.error(error.message);
 		return null;
 	}
