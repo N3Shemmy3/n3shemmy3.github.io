@@ -1,3 +1,5 @@
+
+import type { Head } from '#build/components';
 <template>
     <div
         id="card"
@@ -19,7 +21,7 @@
     >
         <div id="image-wrapper">
             <img
-                class="aspect-video rounded-t-md bg-colorPrimaryLight"
+                class="w-full aspect-video rounded-t-md bg-colorPrimaryLight"
                 :src="props.post.image"
             />
         </div>
