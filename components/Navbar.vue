@@ -54,7 +54,7 @@ const menuItems = ref([
 		title: "Linked-In",
 		icon: "ph:linkedin-logo",
 		url: "https://zm.linkedin.com/in/shemmy-nyirenda-7a3681259",
-	},
+	}
 ]);
 
 function onMenuItemCliked(menu: Menu) {
