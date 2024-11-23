@@ -4,9 +4,9 @@
 
 **Built with:**
 
-* **Nuxt.js:** A powerful, Vue-powered framework for building web applications.
-* **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
-* **TypeScript:** A typed superset of JavaScript for enhanced code reliability.
+* **Nuxt.js:** A powerful, Vue-powered framework for building web applications. ([Link to Nuxt.js website](https://nuxtjs.org/))
+* **Tailwind CSS:** A utility-first CSS framework for rapid UI development. ([Link to Tailwind CSS website](https://tailwindcss.com/))
+* **TypeScript:** A typed superset of JavaScript for enhanced code reliability. ([Link to TypeScript website](https://www.typescriptlang.org/))
 
 **Features:**
 
