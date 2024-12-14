@@ -1,3 +1,12 @@
 <template>
-  <App> Hellow wolrd </App>
+  <App>
+    <template v-slot:header>
+      <Navbar />
+    </template>
+    <template #default>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </template>
+  </App>
 </template>

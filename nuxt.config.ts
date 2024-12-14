@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/png",
-          href: "https://api.iconify.design/meteocons:dust-day.svg?color=%23888888",
+          href: "https://api.iconify.design/ph:terminal-window.svg?color=%23888888",
         },
       ],
     },

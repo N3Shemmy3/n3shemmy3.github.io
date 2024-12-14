@@ -1,5 +1,5 @@
 <script setup>
-defineEmits(["onSearchItemClick", "onGPSItemClick"]);
+defineEmits(["onMenuItemClick"]);
 const colorMode = useColorMode();
 const isDarkMode = ref(colorMode.value === "dark");
 
@@ -18,7 +18,7 @@ const toggleMode = () => {
 <template>
   <!--Toolbar header-->
   <header
-    class="fixed left-0 top-0 right-0 z-50 w-full flex backdrop-filter bg-opacity-40 dark:bg-opacity-80 border-b-[1.5px] bg-colorSurfaceLight dark:bg-colorSurfaceDark dark:border-colorPrimaryDark border-colorPrimaryLight border-opacity-30 dark:border-opacity-30 firefox:bg-opacity-90 backdrop-blur-lg text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+    class="fixed left-0 top-0 right-0 z-50 w-full flex backdrop-filter bg-opacity-40 dark:bg-opacity-80 border-b-[1.5px] bg-colorSurfaceLight dark:bg-colorSurfaceDark dark:border-colorPrimaryDark border-colorPrimaryLight border-opacity-10 dark:border-opacity-10 firefox:bg-opacity-90 backdrop-blur-lg text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
   >
     <!--div that spaces it-->
     <div
@@ -43,13 +43,7 @@ const toggleMode = () => {
             @click="$emit('onSearchItemClick')"
           />
         </Tooltip>
-        <Tooltip text="Use Location">
-          <IconButton
-            size="24"
-            icon="ic:outline-gps-fixed"
-            @click="$emit('onGPSItemClick')"
-          />
-        </Tooltip>
+
         <Tooltip text="Change Theme">
           <IconButton
             size="24"
