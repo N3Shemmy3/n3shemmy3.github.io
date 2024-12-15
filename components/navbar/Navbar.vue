@@ -1,5 +1,6 @@
 <script setup>
 defineEmits(["onMenuItemClick"]);
+
 const colorMode = useColorMode();
 const isDarkMode = ref(colorMode.value === "dark");
 
@@ -39,8 +40,8 @@ const toggleMode = () => {
         <Tooltip text="Search">
           <IconButton
             size="24"
-            icon="ic:outline-search"
-            @click="$emit('onSearchItemClick')"
+            icon="ph:github-logo"
+            @click="$emit('onMenuItemClick')"
           />
         </Tooltip>
 

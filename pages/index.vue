@@ -25,34 +25,40 @@ const languages = ref([
 </script>
 <template>
   <div class="w-full h-full flex flex-col">
-    <div ref="info" class="mt-20 select-text">
-      <h1
-        class="text-[55px] sm:text-[90px] text-center text-colorPrimaryLight dark:text-colorPrimaryDark"
-      >
-        Hello there,
-      </h1>
-      <p class="text-lg whitespace-normal sm:text-2xl text-center">
-        I'm
-        <span
-          class="transition-all noSelect duration-[400ms] hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
+    <section class="w-full h-full flex flex-col max-sm:space-y-4 md:flex-row">
+      <div ref="info" class="w-full mt-20 select-text">
+        <h1
+          class="text-[50px] sm:text-[90px] text-colorPrimaryLight dark:text-colorPrimaryDark"
         >
-          Shemmy Nyirenda
-        </span>
-        a passionate web developer
-      </p>
-    </div>
-    <div
-      ref="languages-div"
-      class="flex mx-auto mb-4 content-center p-4 space-x-8"
-    >
-      <div v-for="language in languages" v-bind:key="language.icon">
-        <Icon
-          :title="language.title"
-          :name="language.icon"
-          size="30px"
-          class="transition-all noSelect duration-300 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-        />
+          Hello there,
+        </h1>
+        <p class="text-sm whitespace-normal sm:text-lg">
+          I'm
+          <span
+            class="transition-all noSelect duration-[400ms] hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
+          >
+            Shemmy Nyirenda
+          </span>
+          a passionate web developer
+        </p>
       </div>
-    </div>
+      <div
+        ref="languages-div"
+        class="w-full md:w-[45%] flex mx-auto mb-4 content-center p-4 space-x-8"
+      >
+        <div
+          class="w-full h-full"
+          v-for="language in languages"
+          v-bind:key="language.icon"
+        >
+          <Icon
+            :title="language.title"
+            :name="language.icon"
+            size="30px"
+            class="transition-all noSelect duration-300 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
