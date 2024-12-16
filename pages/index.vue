@@ -71,6 +71,6 @@
 </template>
 <style scoped>
 .highlight {
-  @apply cursor-text transition-all  duration-[400ms] hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark;
+  @apply cursor-text transition-all duration-[400ms] hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark;
 }
 </style>
