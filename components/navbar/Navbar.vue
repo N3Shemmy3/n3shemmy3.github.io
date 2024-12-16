@@ -28,10 +28,11 @@ const toggleMode = () => {
       <div>
         <NuxtLink
           href="/"
-          class="text-lg duration-300 cursor-pointer rounded-full hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
+          class="flex items-center space-x-1 text-lg duration-300 cursor-pointer rounded-full hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
         >
-          N3Shemmy3</NuxtLink
-        >
+          <Icon name="ph:terminal-window" size="24" />
+          <H4>N3Shemmy3</H4>
+        </NuxtLink>
       </div>
 
       <!--Items end-->
