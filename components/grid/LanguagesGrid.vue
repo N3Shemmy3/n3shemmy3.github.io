@@ -40,6 +40,7 @@ const iconIndex = (index: number): Language => {
       class="w-full h-full flex bg-colorBackgroundLight dark:bg-colorBackgroundDark"
     >
       <!-- Check if the current index maps to an icon -->
+
       <Icon
         v-if="iconIndex(index)"
         :title="iconIndex(index).title"

@@ -21,7 +21,7 @@ module.exports = {
       },
       colors: {
         /* light */
-        colorPrimaryLight: "#7a5900",
+        colorPrimaryLight: "#765a00",
         colorOnPrimaryLight: "#ffffff",
         colorPrimaryContainerLight: "#ffdea3",
         colorOnPrimaryContainerLight: "#261900",
