@@ -19,11 +19,10 @@ defineProps({
 
 <style>
 .tooltip-wrapper {
-  display: inline-block;
 }
 
 .tooltip {
-  @apply absolute z-[1000]  bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark rounded-sm px-4 py-2 whitespace-nowrap text-sm;
+  @apply absolute z-[100]  bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark rounded-sm px-4 py-2 whitespace-nowrap text-sm;
   position: absolute;
   bottom: 150%; /* Adjust as needed */
   left: 50%;

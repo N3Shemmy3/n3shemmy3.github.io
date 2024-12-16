@@ -12,6 +12,9 @@ export default defineNuxtConfig({
   app: {
     buildAssetsDir: "/app/",
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       link: [
         {
           rel: "icon",

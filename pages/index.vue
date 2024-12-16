@@ -44,12 +44,12 @@
         <li
           v-for="n in 10"
           :key="n"
-          class="w-full h-full flex flex-col rounded-md overflow-clip backdrop-blur transition-all duration-300 border-[1.5px] cursor-pointer hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark hover:bg-opacity-10 dark:hover:hover:bg-opacity-10 border-colorOutlineLight dark:border-colorOutlineDark border-opacity-20 dark:border-opacity-5"
+          class="w-full h-full flex flex-col rounded-md overflow-clip backdrop-blur transition-all duration-300 border-[1.5px] cursor-pointer hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark dark:hover:hover:bg-opacity-10 border-colorOutlineLight dark:border-colorOutlineDark border-opacity-20 dark:border-opacity-5"
         >
           <!--Header card-->
           <div class="w-full h-fit flex space-x-2 p-4">
             <div class="w-1/2">
-              <Icon name="devicon:adonisjs" class="size-12 rounded-lg" />
+              <Icon name="devicon:vuejs" class="size-12" />
               <h6 class="text-base">App name</h6>
             </div>
             <div class="w-1/2 flex p-4">
