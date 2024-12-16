@@ -1,30 +1,6 @@
-<script setup lang="ts">
-interface Menu {
-  icon: string;
-  title: string;
-  url: string;
-}
-const languages = ref([
-  {
-    title: "Java",
-    icon: "nonicons:java-16",
-  },
-  {
-    title: "JavaScript",
-    icon: "nonicons:javascript-16",
-  },
-  {
-    title: "Html",
-    icon: "nonicons:html-16",
-  },
-  {
-    title: "Css",
-    icon: "nonicons:css-16",
-  },
-]);
-</script>
+<script setup lang="ts"></script>
 <template>
-  <div class="w-full h-full flex flex-col">
+  <main class="w-full h-full flex flex-col">
     <section class="w-full h-full flex flex-col max-sm:space-y-4 md:flex-row">
       <div ref="info" class="w-full mt-20 select-text">
         <h1
@@ -46,19 +22,8 @@ const languages = ref([
         ref="languages-div"
         class="w-full md:w-[45%] flex mx-auto mb-4 content-center p-4 space-x-8"
       >
-        <div
-          class="w-full h-full"
-          v-for="language in languages"
-          v-bind:key="language.icon"
-        >
-          <Icon
-            :title="language.title"
-            :name="language.icon"
-            size="30px"
-            class="transition-all noSelect duration-300 cursor-pointer hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark"
-          />
-        </div>
+        <LanguagesGrid />
       </div>
     </section>
-  </div>
+  </main>
 </template>
