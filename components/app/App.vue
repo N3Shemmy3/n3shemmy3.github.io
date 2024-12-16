@@ -14,7 +14,7 @@ useSeoMeta({
   <div class="w-full h-dvh flex flex-col">
     <slot name="header" />
     <div class="h-16 md:h-20" />
-    <div class="w-full sm:h-full xl:max-w-6xl xl:mx-auto px-4 py-2 md:p-4">
+    <div class="w-full xl:max-w-6xl xl:mx-auto px-4 py-2 md:p-4">
       <slot />
     </div>
     <slot name="footer" />

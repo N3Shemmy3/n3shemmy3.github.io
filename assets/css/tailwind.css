@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+.noSelect {
+  -webkit-tap-highdark-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@tailwind utilities;
+.noSelect:focus {
+  outline: none !important;
+}

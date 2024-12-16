@@ -17,9 +17,8 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style>
 .tooltip-wrapper {
-  position: unset;
   display: inline-block;
 }
 
