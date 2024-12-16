@@ -27,7 +27,7 @@ const iconIndex = (index: number): Language => {
 
 <template>
   <div
-    class="relative w-full h-full aspect-square m-auto grid gap-[1.5px] grid-cols-3 grid-rows-3 bg-blend-color-dodge rounded-full overflow-clip"
+    class="fading-edges relative w-full h-full aspect-square m-auto grid gap-[1.5px] grid-cols-3 grid-rows-3 bg-blend-color-dodge rounded-full overflow-clip"
   >
     <!-- glowing bg-->
     <div
@@ -67,5 +67,23 @@ const iconIndex = (index: number): Language => {
 }
 .animate-pulse {
   animation: pulse 3s ease-in-out cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.fading-edges {
+  position: relative;
+  background-size: cover;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
 }
 </style>

@@ -1,8 +1,14 @@
 <script setup lang="ts"></script>
 <template>
   <main class="w-full h-full flex flex-col">
-    <section class="w-full h-full flex flex-col max-sm:space-y-4 md:flex-row">
-      <div ref="info" class="w-full mt-20 select-text">
+    <section
+      id="hero-section"
+      class="w-full h-full flex flex-col-reverse max-sm:space-y-4 md:flex-row"
+    >
+      <div
+        ref="info"
+        class="w-full h-full flex flex-col justify-center mt-20 select-text"
+      >
         <h1
           class="text-[50px] sm:text-[90px] text-colorPrimaryLight dark:text-colorPrimaryDark"
         >
@@ -25,5 +31,6 @@
         <LanguagesGrid />
       </div>
     </section>
+    <section class=""></section>
   </main>
 </template>

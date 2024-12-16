@@ -1,6 +1,5 @@
 <script setup>
 defineEmits(["onMenuItemClick"]);
-
 const colorMode = useColorMode();
 const isDarkMode = ref(colorMode.value === "dark");
 
@@ -45,6 +44,13 @@ const toggleMode = () => {
           />
         </Tooltip>
 
+        <Tooltip text="Blog">
+          <IconButton
+            size="24"
+            icon="ic:outline-newspaper"
+            @click="$emit('onMenuItemClick')"
+          />
+        </Tooltip>
         <Tooltip text="Change Theme">
           <IconButton
             size="24"

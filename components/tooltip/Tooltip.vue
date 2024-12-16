@@ -1,7 +1,7 @@
 <template>
   <div class="tooltip-wrapper">
     <slot />
-    <div class="tooltip borders" v-show="visible">{{ text }}</div>
+    <div class="tooltip borders">{{ text }}</div>
   </div>
 </template>
 
@@ -15,28 +15,18 @@ defineProps({
     required: true,
   },
 });
-
-const visible = ref(false);
-
-const showTooltip = () => {
-  visible.value = true;
-};
-
-const hideTooltip = () => {
-  visible.value = false;
-};
 </script>
 
 <style scoped>
 .tooltip-wrapper {
-  position: relative;
+  position: unset;
   display: inline-block;
 }
 
 .tooltip {
-  @apply absolute z-[80]  bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark rounded-sm px-4 py-2 whitespace-nowrap text-sm;
+  @apply absolute z-[1000]  bg-colorSurfaceLight dark:bg-colorSurfaceDark text-colorOnSurfaceLight dark:text-colorOnSurfaceDark rounded-sm px-4 py-2 whitespace-nowrap text-sm;
   position: absolute;
-  bottom: 120%; /* Adjust as needed */
+  bottom: 150%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   visibility: hidden;

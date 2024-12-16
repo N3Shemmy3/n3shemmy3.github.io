@@ -14,7 +14,7 @@ defineProps({
 </script>
 <template>
   <button
-    class="flex size-12 min-w-12 min-h-12 items-center justify-center transition-colors duration-300 cursor-pointer rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
+    class="flex size-12 min-w-12 min-h-12 items-center justify-center transition-all duration-300 cursor-pointer rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
   >
     <Icon :name="icon" :size="size" />
   </button>
